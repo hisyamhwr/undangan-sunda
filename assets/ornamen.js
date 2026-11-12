@@ -183,12 +183,13 @@
       Object.assign(i.style, { left: (rnd() * 96).toFixed(1) + "%", animationDuration: (11 + rnd() * 10).toFixed(1) + "s", animationDelay: (-rnd() * 20).toFixed(1) + "s" });
       sp.style.animationDuration = (2.4 + rnd() * 2).toFixed(1) + "s";
     }
-    for (let k = 0; k < 9; k++) {
+    for (let k = 0; k < 14; k++) {
       const i = document.createElement("i"); i.className = "ragrag ragrag--kelopak";
       const sp = document.createElement("span"); sp.className = k % 3 ? "kelopak-pink" : "kelopak-bodas";
       i.appendChild(sp); suasana.appendChild(i);
-      Object.assign(i.style, { left: (rnd() * 96).toFixed(1) + "%", animationDuration: (9 + rnd() * 9).toFixed(1) + "s", animationDelay: (-rnd() * 18).toFixed(1) + "s" });
-      sp.style.scale = (0.7 + rnd() * 0.7).toFixed(2);
+      Object.assign(i.style, { left: (rnd() * 96).toFixed(1) + "%", animationDuration: (8 + rnd() * 8).toFixed(1) + "s", animationDelay: (-rnd() * 18).toFixed(1) + "s" });
+      sp.style.scale = (0.75 + rnd() * 0.65).toFixed(2);
+      sp.style.animationDuration = (2.2 + rnd() * 2).toFixed(1) + "s";
     }
     for (let k = 0; k < 6; k++) {
       const i = document.createElement("i"); i.className = "randa";

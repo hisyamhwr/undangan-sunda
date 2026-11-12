@@ -138,30 +138,57 @@
       <path d="M14 -306 C24 -306 26 -296 20 -292 C18 -298 16 -302 14 -306Z" fill="url(#batik)" stroke="#55663f"/>
       <path d="M-17 -305 C-8 -309 8 -309 17 -305" stroke="url(#emas)" stroke-width="2" fill="none"/>
     </symbol>
-    <!-- couple portrait used inside polaroids (viewBox 0 0 240 250) -->
-    <symbol id="potretBerdua" viewBox="0 0 240 250">
-      <rect width="240" height="250" style="fill: var(--lemah)"/>
-      <path d="M32 250 V114 A88 88 0 0 1 208 114 V250Z" style="fill: var(--dasar)" opacity=".9"/>
-      <path d="M32 250 V114 A88 88 0 0 1 208 114 V250" fill="none" style="stroke: var(--utama-2)" stroke-width="1.6" opacity=".55"/>
-      <use href="#kiceup" x="200" y="42" width="13" height="13"/><use href="#kiceup" x="26" y="74" width="9" height="9"/><use href="#kiceup" x="214" y="96" width="7" height="7"/>
-      <use href="#pasanganBaru" x="-28" y="-32" width="300" height="400"/>
-      <use href="#ranggeuy" x="-6" y="210" width="104" height="40"/>
-      <use href="#ranggeuy" x="-4" y="210" width="104" height="40" transform="matrix(-1 0 0 1 240 0)"/>
-    </symbol>
-    <symbol id="potretWanita" viewBox="0 0 160 180">
-      <rect width="160" height="180" style="fill: var(--aksen-lemah)"/>
-      <circle cx="80" cy="84" r="64" style="fill: var(--dasar)" opacity=".85"/>
-      <use href="#figBaruWanita" x="-42" y="-36" width="300" height="400"/>
-    </symbol>
-    <symbol id="potretPria" viewBox="0 0 160 180">
-      <rect width="160" height="180" style="fill: var(--lemah)"/>
-      <circle cx="80" cy="84" r="64" style="fill: var(--dasar)" opacity=".85"/>
-      <use href="#figBaruPria" x="-98" y="-30" width="300" height="400"/>
-    </symbol>
-    <!-- ===== Couple illustration v2: soft line art, faces, flowing fabric (viewBox 0 0 300 400) ===== -->
+        <!-- couple portrait used inside polaroids (viewBox 0 0 240 250) -->
+    <!-- Enhanced Romantic Illustrator Palette, Gradients & Frames -->
+    <radialGradient id="pipiBlush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6b81" stop-opacity="0.75"/>
+      <stop offset="55%" stop-color="#ff758c" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#ff758c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="kulitWanita" cx="42%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#fff8f2"/>
+      <stop offset="70%" stop-color="#fae7d8"/>
+      <stop offset="100%" stop-color="#f2d2bd"/>
+    </radialGradient>
+    <radialGradient id="kulitPria" cx="44%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#fff4eb"/>
+      <stop offset="70%" stop-color="#f7ded0"/>
+      <stop offset="100%" stop-color="#eec7b4"/>
+    </radialGradient>
+    <linearGradient id="emasKilau" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2b3"/>
+      <stop offset="30%" stop-color="#ffd566"/>
+      <stop offset="65%" stop-color="#cf982a"/>
+      <stop offset="90%" stop-color="#fced93"/>
+      <stop offset="100%" stop-color="#996e14"/>
+    </linearGradient>
+    <radialGradient id="bohlamGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#fff8cc"/>
+      <stop offset="65%" stop-color="#ffc642" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ff9d00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bokehOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#ffeed1" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffd56b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pitaHalus" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#fcdbd4"/>
+      <stop offset="100%" stop-color="#e89e92"/>
+    </linearGradient>
+    <filter id="cahayaLampu" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
     <pattern id="batikKain" width="15" height="15" patternUnits="userSpaceOnUse" patternTransform="rotate(10)">
       <rect width="15" height="15" style="fill: var(--batik)"/>
-      <g fill="#f6ead8" opacity=".55">
+      <g fill="#f6ead8" opacity=".6">
         <ellipse cx="7.5" cy="3.4" rx="1.8" ry="2.8"/><ellipse cx="7.5" cy="11.6" rx="1.8" ry="2.8"/>
         <ellipse cx="3.4" cy="7.5" rx="2.8" ry="1.8"/><ellipse cx="11.6" cy="7.5" rx="2.8" ry="1.8"/>
       </g>
@@ -176,150 +203,390 @@
       <circle cx="3.5" cy="3.5" r="1.5" fill="none" stroke="#ead8cb" stroke-width=".6"/>
       <circle cx="3.5" cy="3.5" r=".5" fill="#efc7c2"/>
     </pattern>
-    <!-- light from the top left, shadow to the right -->
     <linearGradient id="cahayaKain" x1="0" y1="0" x2="1" y2=".25">
-      <stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/>
       <stop offset=".7" stop-color="#5e4036" stop-opacity="0"/><stop offset="1" stop-color="#5e4036" stop-opacity=".16"/>
     </linearGradient>
     <linearGradient id="bayanganBawah" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#5e4036" stop-opacity="0"/><stop offset="1" stop-color="#5e4036" stop-opacity=".14"/>
     </linearGradient>
 
+    <!-- Ornate Botanical Oval Garland Frame with Ribbon Bow & Fairy Lights (References 1, 2 & 4) -->
+    <symbol id="bingkaiBotanikal" viewBox="0 0 240 250">
+      <!-- Soft ambient backdrop -->
+      <ellipse cx="120" cy="126" rx="98" ry="110" fill="var(--dasar)" opacity="0.95"/>
+      <!-- Soft romantic bokeh orbs -->
+      <circle cx="48" cy="95" r="16" fill="url(#bokehOrb)"/>
+      <circle cx="192" cy="102" r="14" fill="url(#bokehOrb)"/>
+      <circle cx="120" cy="75" r="18" fill="url(#bokehOrb)"/>
+      <circle cx="70" cy="170" r="12" fill="url(#bokehOrb)" opacity="0.5"/>
+      <circle cx="170" cy="175" r="12" fill="url(#bokehOrb)" opacity="0.5"/>
+
+      <!-- Double hairline border -->
+      <ellipse cx="120" cy="126" rx="97" ry="109" fill="none" stroke="var(--utama-2)" stroke-width="1.2" opacity="0.55"/>
+      <ellipse cx="120" cy="126" rx="93" ry="105" fill="none" stroke="url(#emasKilau)" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.85"/>
+
+      <!-- Fairy lights string arch across top (Reference 1) -->
+      <path d="M34 76 C72 38 168 38 206 76" fill="none" stroke="#7a624d" stroke-width="0.9" opacity="0.55"/>
+      <!-- Glowing fairy light bulbs with golden halos -->
+      <g filter="url(#cahayaLampu)" class="lampu-gantung">
+        <circle cx="56" cy="62" r="7" fill="url(#bohlamGlow)"/>
+        <circle cx="56" cy="62" r="2.2" fill="#fff"/>
+        <circle cx="86" cy="50" r="8" fill="url(#bohlamGlow)"/>
+        <circle cx="86" cy="50" r="2.5" fill="#fff"/>
+        <circle cx="120" cy="45" r="9" fill="url(#bohlamGlow)"/>
+        <circle cx="120" cy="45" r="2.8" fill="#fff"/>
+        <circle cx="154" cy="50" r="8" fill="url(#bohlamGlow)"/>
+        <circle cx="154" cy="50" r="2.5" fill="#fff"/>
+        <circle cx="184" cy="62" r="7" fill="url(#bohlamGlow)"/>
+        <circle cx="184" cy="62" r="2.2" fill="#fff"/>
+      </g>
+
+      <!-- Tied Silk Ribbon Bow at the Top Center (References 2 & 4) -->
+      <g transform="translate(120, 20)">
+        <path d="M0 4 C-11 -11 -28 -7 -20 6 C-13 13 -4 8 0 4 Z" fill="url(#pitaHalus)" stroke="#c27568" stroke-width="0.7"/>
+        <path d="M0 4 C11 -11 28 -7 20 6 C13 13 4 8 0 4 Z" fill="url(#pitaHalus)" stroke="#c27568" stroke-width="0.7"/>
+        <circle cx="0" cy="4" r="3.4" fill="#d97a6d" stroke="#b65749" stroke-width="0.7"/>
+        <path d="M-1 6 C-6 16 -12 25 -19 32 C-14 27 -8 20 -3 8 Z" fill="url(#pitaHalus)" opacity="0.9"/>
+        <path d="M1 6 C6 16 12 25 19 32 C14 27 8 20 3 8 Z" fill="url(#pitaHalus)" opacity="0.9"/>
+      </g>
+
+      <!-- Botanical Wreath Corner Foliage & Roses -->
+      <!-- Top Left Sprig -->
+      <g transform="translate(34, 42) rotate(-32)">
+        <use href="#daun" x="0" y="0" width="22" height="11" style="color: var(--daun-1)"/>
+        <use href="#daun" x="12" y="8" width="18" height="9" style="color: var(--daun-2)"/>
+        <use href="#mawar" x="4" y="-3" width="17" height="17" style="color: var(--aksen)"/>
+      </g>
+      <!-- Top Right Sprig -->
+      <g transform="translate(206, 42) rotate(32) scale(-1, 1)">
+        <use href="#daun" x="0" y="0" width="22" height="11" style="color: var(--daun-1)"/>
+        <use href="#daun" x="12" y="8" width="18" height="9" style="color: var(--daun-2)"/>
+        <use href="#mawar" x="4" y="-3" width="17" height="17" style="color: var(--aksen)"/>
+      </g>
+      <!-- Left Bow Accent -->
+      <g transform="translate(23, 126) rotate(-90) scale(0.75)">
+        <path d="M0 4 C-8 -8 -20 -5 -14 5 C-9 10 -3 6 0 4 Z" fill="url(#pitaHalus)"/>
+        <path d="M0 4 C8 -8 20 -5 14 5 C9 10 3 6 0 4 Z" fill="url(#pitaHalus)"/>
+        <circle cx="0" cy="4" r="2.5" fill="#d97a6d"/>
+      </g>
+      <!-- Right Bow Accent -->
+      <g transform="translate(217, 126) rotate(90) scale(0.75)">
+        <path d="M0 4 C-8 -8 -20 -5 -14 5 C-9 10 -3 6 0 4 Z" fill="url(#pitaHalus)"/>
+        <path d="M0 4 C8 -8 20 -5 14 5 C9 10 3 6 0 4 Z" fill="url(#pitaHalus)"/>
+        <circle cx="0" cy="4" r="2.5" fill="#d97a6d"/>
+      </g>
+      <!-- Bottom Garland Sprig -->
+      <g transform="translate(120, 236)">
+        <use href="#ranggeuy" x="-72" y="-18" width="72" height="26"/>
+        <use href="#ranggeuy" x="-72" y="-18" width="72" height="26" transform="scale(-1, 1)"/>
+        <use href="#mawar" x="-11" y="-16" width="22" height="22" style="color: var(--aksen)"/>
+        <circle cx="0" cy="-5" r="3.5" fill="#fff" opacity="0.85"/>
+      </g>
+    </symbol>
+
+    <!-- Solo Portrait Botanical Frame -->
+    <symbol id="bingkaiSolo" viewBox="0 0 160 180">
+      <ellipse cx="80" cy="90" rx="66" ry="76" fill="var(--dasar)" opacity="0.94"/>
+      <ellipse cx="80" cy="90" rx="65" ry="75" fill="none" stroke="var(--utama-2)" stroke-width="1.1" opacity="0.6"/>
+      <ellipse cx="80" cy="90" rx="61" ry="71" fill="none" stroke="url(#emasKilau)" stroke-width="0.75" stroke-dasharray="3 2.5" opacity="0.85"/>
+      <!-- Soft ambient bokeh -->
+      <circle cx="36" cy="65" r="10" fill="url(#bokehOrb)"/>
+      <circle cx="124" cy="68" r="10" fill="url(#bokehOrb)"/>
+      <!-- Tiny bow at top -->
+      <g transform="translate(80, 18) scale(0.7)">
+        <path d="M0 4 C-10 -10 -24 -6 -17 6 C-11 12 -3 7 0 4 Z" fill="url(#pitaHalus)"/>
+        <path d="M0 4 C10 -10 24 -6 17 6 C11 12 3 7 0 4 Z" fill="url(#pitaHalus)"/>
+        <circle cx="0" cy="4" r="3" fill="#d97a6d"/>
+      </g>
+      <!-- Bottom floral garland -->
+      <g transform="translate(80, 166) scale(0.75)">
+        <use href="#ranggeuy" x="-50" y="-14" width="50" height="20"/>
+        <use href="#ranggeuy" x="-50" y="-14" width="50" height="20" transform="scale(-1, 1)"/>
+        <use href="#mawar" x="-9" y="-14" width="18" height="18" style="color: var(--aksen)"/>
+      </g>
+    </symbol>
+
+    <!-- couple portrait used inside polaroids (viewBox 0 0 240 250) -->
+    <symbol id="potretBerdua" viewBox="0 0 240 250">
+      <rect width="240" height="250" style="fill: var(--lemah)"/>
+      <use href="#bingkaiBotanikal" x="0" y="0" width="240" height="250"/>
+      <use href="#kiceup" x="200" y="42" width="13" height="13"/>
+      <use href="#kiceup" x="26" y="74" width="10" height="10"/>
+      <use href="#kiceup" x="214" y="96" width="8" height="8"/>
+      <use href="#pasanganBaru" x="-28" y="-34" width="300" height="400"/>
+    </symbol>
+
+    <symbol id="potretWanita" viewBox="0 0 160 180">
+      <rect width="160" height="180" style="fill: var(--aksen-lemah)"/>
+      <use href="#bingkaiSolo" x="0" y="0" width="160" height="180"/>
+      <use href="#kiceup" x="136" y="28" width="10" height="10"/>
+      <use href="#kiceup" x="18" y="52" width="8" height="8"/>
+      <use href="#figBaruWanita" x="-42" y="-38" width="300" height="400"/>
+    </symbol>
+
+    <symbol id="potretPria" viewBox="0 0 160 180">
+      <rect width="160" height="180" style="fill: var(--lemah)"/>
+      <use href="#bingkaiSolo" x="0" y="0" width="160" height="180"/>
+      <use href="#kiceup" x="136" y="28" width="10" height="10"/>
+      <use href="#kiceup" x="18" y="52" width="8" height="8"/>
+      <use href="#figBaruPria" x="-98" y="-32" width="300" height="400"/>
+    </symbol>
+
+    <!-- ===== Upgraded Groom (figBaruPria): Handsome, loving smile, blush cheeks, modern beskap with batik sash (References 1 & 2) ===== -->
     <symbol id="figBaruPria" viewBox="0 0 300 400">
-      <g stroke="#5b4037" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
-        <!-- trousers & shoes -->
-        <path d="M166 294 C165 330 164 362 164 390 L184 390 L188 318 L192 390 L212 390 C212 362 211 330 210 294Z" fill="#6e5247"/>
+      <g stroke="#4f3830" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
+        <!-- Trousers & Shoes -->
+        <path d="M166 294 C165 330 164 362 164 390 L184 390 L188 318 L192 390 L212 390 C212 362 211 330 210 294Z" fill="#5c4339"/>
         <path d="M166 294 C165 330 164 362 164 390 L172 390 C172 360 172 328 174 296Z" fill="#fff" opacity=".08" stroke="none"/>
-        <path d="M174 392 c-8 0 -14 -2 -14 -5 c0 -3 6 -4 14 -4 c6 0 10 2 10 5z M202 392 c8 0 14 -2 14 -5 c0 -3 -6 -4 -14 -4 c-6 0 -10 2 -10 5z" fill="#3d2c26"/>
-        <!-- upper body leans toward the bride -->
+        <path d="M174 392 c-8 0 -14 -2 -14 -5 c0 -3 6 -4 14 -4 c6 0 10 2 10 5z M202 392 c8 0 14 -2 14 -5 c0 -3 -6 -4 -14 -4 c-6 0 -10 2 -10 5z" fill="#2d1f1a"/>
+
+        <!-- Upper body leans affectionately toward the bride -->
         <g transform="rotate(-3 188 300)">
-          <!-- batik samping -->
+          <!-- Batik Samping Sinjang -->
           <path d="M160 254 C158 272 160 292 163 306 C179 312 200 312 216 306 C219 292 220 272 218 254Z" fill="url(#batikKain)"/>
           <path d="M160 254 C158 272 160 292 163 306 C179 312 200 312 216 306 C219 292 220 272 218 254Z" fill="url(#cahayaKain)" stroke="none"/>
           <path d="M199 256 C197 274 195 292 193 310 M199 256 C205 274 209 292 211 308" fill="none" stroke-width="1"/>
-          <!-- beskap: fitted, slightly flared hem -->
-          <path d="M160 150 C150 168 150 206 153 236 C154 252 156 262 158 270 C176 278 202 278 220 270 C222 262 224 252 225 236 C228 206 228 168 218 150 C206 140 172 140 160 150Z" fill="#f3e8d5"/>
+
+          <!-- Beskap: Tailored cream coat with flared hem -->
+          <path d="M160 150 C150 168 150 206 153 236 C154 252 156 262 158 270 C176 278 202 278 220 270 C222 262 224 252 225 236 C228 206 228 168 218 150 C206 140 172 140 160 150Z" fill="#f5eee2"/>
           <path d="M160 150 C150 168 150 206 153 236 C154 252 156 262 158 270 C176 278 202 278 220 270 C222 262 224 252 225 236 C228 206 228 168 218 150 C206 140 172 140 160 150Z" fill="url(#cahayaKain)" stroke="none"/>
-          <path d="M176 147 C190 178 202 212 208 272" fill="none" stroke="#b8976c" stroke-width="1.5"/>
-          <path d="M176 147 C188 176 198 206 204 240" fill="none" stroke="#fff" stroke-width="1" opacity=".7"/>
-          <g fill="url(#emas)" stroke="#9c7a3c" stroke-width=".6"><circle cx="186" cy="168" r="2.6"/><circle cx="193" cy="186" r="2.6"/><circle cx="199" cy="205" r="2.6"/><circle cx="203" cy="225" r="2.6"/></g>
-          <path d="M173 145 C182 151 196 151 205 145 L205 138 C196 142 182 142 173 138Z" fill="#e8d6b7"/>
-          <!-- neck -->
-          <path d="M182 126 L182 140 C186 143 192 143 196 140 L196 126Z" fill="#efc9ae"/>
-          <path d="M182 132 C186 135 192 135 196 132" fill="none" stroke="#d9a98c" stroke-width=".9"/>
-          <!-- jasmine necklace with a rose pendant -->
-          <path d="M178 147 C172 178 172 206 177 234 M200 147 C206 178 206 206 201 234" fill="none" stroke="#d9c9b2" stroke-width="5.6" stroke-dasharray="0.1 6.4"/>
-          <path d="M178 147 C172 178 172 206 177 234 M200 147 C206 178 206 206 201 234" fill="none" stroke="#fffdf7" stroke-width="4" stroke-dasharray="0.1 6.4"/>
-          <!-- arms: the near arm rests behind the bride, hands meet in front -->
-          <path d="M161 156 C148 186 150 222 173 244 L183 236 C167 219 165 192 170 166Z" fill="#efe3cd"/>
-          <path d="M217 156 C231 186 229 222 206 244 L196 236 C212 219 214 192 209 166Z" fill="#efe3cd"/>
-          <path d="M217 156 C231 186 229 222 206 244 L201 240 C220 220 222 192 214 162Z" fill="#5e4036" opacity=".08" stroke="none"/>
-          <path d="M184 247 c-6 -1 -10 -5 -9 -9 c1 -4 7 -5 12 -3 c4 2 5 6 3 9 c-1 2 -3 3 -6 3z" fill="#efc9ae"/>
-          <path d="M194 248 c6 -1 10 -5 9 -9 c-1 -4 -7 -5 -12 -3 c-4 2 -5 6 -3 9 c1 2 3 3 6 3z" fill="#f3d1b8"/>
-          <path d="M189 238 c1 3 1 6 -1 9" fill="none" stroke-width=".9" opacity=".6"/>
-          <use href="#mawar" x="181" y="226" width="16" height="16" style="color: var(--aksen)" stroke="none"/>
-          <!-- head -->
-          <g transform="rotate(-9 188 106)">
-            <path d="M162 100 C158 92 160 80 168 74 C168 86 166 96 167 106Z M214 100 C218 92 216 80 208 74 C208 86 210 96 209 106Z" fill="#33241f"/>
-            <ellipse cx="164.5" cy="108" rx="4.6" ry="6.4" fill="#efc6aa"/><ellipse cx="211.5" cy="108" rx="4.6" ry="6.4" fill="#efc6aa"/>
-            <path d="M165 100 C163 121 173 133 188 133 C203 133 213 121 211 100 C210 84 201 76 188 76 C175 76 166 84 165 100Z" fill="#f5d6bd"/>
-            <path d="M200 80 C208 86 211 96 210 106 C206 96 204 88 200 80Z" fill="#e7b99d" opacity=".5" stroke="none"/>
-            <!-- swept fringe peeking under the bendo -->
-            <path d="M167 92 C172 88 178 87 184 89 C181 92 179 96 179 100 C184 94 192 90 200 90 C204 90 208 92 210 95 L210 86 L167 86Z" fill="#33241f"/>
-            <!-- bendo: snug cap, stiff front band, knot at the back -->
-            <path d="M165 92 C161 66 176 54 189 54 C203 54 217 66 212 92 C201 86 177 86 165 92Z" fill="url(#batikPoek)"/>
-            <path d="M178 58 C184 66 186 78 186 87" fill="none" stroke="#3b2a22" stroke-width=".9" opacity=".7"/>
-            <path d="M165 92 C177 85 201 85 212 92 L212 88 C201 81 177 81 165 88Z" fill="#4e3529" stroke-width="1"/>
-            <path d="M166 90 C178 84 200 84 211 90" fill="none" stroke="url(#emas)" stroke-width="1.2"/>
+
+          <!-- Distinctive Diagonal Batik Lapel / Sash (Inspired by Reference 2) -->
+          <path d="M174 146 L194 146 L182 270 L168 268 Z" fill="url(#batikPoek)"/>
+          <path d="M174 146 L168 268 M194 146 L182 270" fill="none" stroke="url(#emasKilau)" stroke-width="1.6"/>
+
+          <!-- Golden Buttons down the lapel -->
+          <g fill="url(#emasKilau)" stroke="#8e6722" stroke-width=".6">
+            <circle cx="178" cy="168" r="2.8"/>
+            <circle cx="177" cy="188" r="2.8"/>
+            <circle cx="176" cy="208" r="2.8"/>
+            <circle cx="174" cy="228" r="2.8"/>
+          </g>
+
+          <!-- Pocket square & Gold Watch Chain Brooch (Reference 2) -->
+          <path d="M204 186 C212 186 218 186 220 188 L218 196 L204 196 Z" fill="#ffffff" stroke="#d5c3b0" stroke-width="0.8"/>
+          <!-- Chain drape -->
+          <path d="M178 188 C186 198 196 198 206 192" fill="none" stroke="url(#emasKilau)" stroke-width="1.3"/>
+          <circle cx="206" cy="192" r="2" fill="url(#emasKilau)"/>
+
+          <!-- Beskap High Collar -->
+          <path d="M173 145 C182 151 196 151 205 145 L205 138 C196 142 182 142 173 138Z" fill="#ebe0cb"/>
+          <path d="M173 142 C182 146 196 146 205 142" fill="none" stroke="url(#emasKilau)" stroke-width="1.1"/>
+
+          <!-- Neck -->
+          <path d="M182 126 L182 140 C186 143 192 143 196 140 L196 126Z" fill="url(#kulitPria)"/>
+
+          <!-- Jasmine Garland (Kalung Melati) -->
+          <path d="M176 147 C168 178 168 206 174 234 M202 147 C208 178 208 206 203 234" fill="none" stroke="#d9c9b2" stroke-width="5.4" stroke-dasharray="0.1 6.2"/>
+          <path d="M176 147 C168 178 168 206 174 234 M202 147 C208 178 208 206 203 234" fill="none" stroke="#fffdf8" stroke-width="3.8" stroke-dasharray="0.1 6.2"/>
+
+          <!-- Arms: Tender posture leaning toward bride -->
+          <path d="M161 156 C148 186 150 222 173 244 L183 236 C167 219 165 192 170 166Z" fill="#f0e5d4"/>
+          <path d="M217 156 C231 186 229 222 206 244 L196 236 C212 219 214 192 209 166Z" fill="#f0e5d4"/>
+
+          <!-- Hands meeting gently in front -->
+          <path d="M184 247 c-6 -1 -10 -5 -9 -9 c1 -4 7 -5 12 -3 c4 2 5 6 3 9 c-1 2 -3 3 -6 3z" fill="url(#kulitPria)"/>
+          <path d="M194 248 c6 -1 10 -5 9 -9 c-1 -4 -7 -5 -12 -3 c-4 2 -5 6 -3 9 c1 2 3 3 6 3z" fill="url(#kulitPria)"/>
+          <!-- Boutonniere flower pin -->
+          <use href="#mawar" x="180" y="226" width="16" height="16" style="color: var(--aksen)" stroke="none"/>
+
+          <!-- Head (sweet affectionate tilt) -->
+          <g transform="rotate(-7 188 106)">
+            <!-- Hair base & ears -->
+            <path d="M162 100 C158 92 160 80 168 74 C168 86 166 96 167 106Z M214 100 C218 92 216 80 208 74 C208 86 210 96 209 106Z" fill="#2c1e19"/>
+            <ellipse cx="164.5" cy="108" rx="4.6" ry="6.4" fill="url(#kulitPria)"/>
+            <ellipse cx="211.5" cy="108" rx="4.6" ry="6.4" fill="url(#kulitPria)"/>
+
+            <!-- Face shape with soft warm gradient -->
+            <path d="M165 100 C163 121 173 134 188 134 C203 134 213 121 211 100 C210 84 201 76 188 76 C175 76 166 84 165 100Z" fill="url(#kulitPria)"/>
+
+            <!-- Natural hair styling peeking under bendo -->
+            <path d="M166 92 C172 87 180 86 186 88 C182 92 180 96 180 100 C186 93 194 89 202 89 C206 89 210 91 211 94 L211 86 L166 86Z" fill="#2c1e19"/>
+
+            <!-- Sundanese Bendo Headdress with batik and gold trimming -->
+            <path d="M165 92 C161 64 176 52 189 52 C203 52 217 64 212 92 C201 86 177 86 165 92Z" fill="url(#batikPoek)"/>
+            <path d="M165 92 C177 85 201 85 212 92 L212 88 C201 81 177 81 165 88Z" fill="#3a251c" stroke-width="1"/>
+            <path d="M166 90 C178 84 200 84 211 90" fill="none" stroke="url(#emasKilau)" stroke-width="1.4"/>
             <path d="M209 66 C220 62 227 72 221 80 C217 76 213 74 210 72Z" fill="url(#batikPoek)"/>
-            <!-- face: laughing, eyes closed -->
-            <path d="M174 99 q5.5 -3.5 10.5 -.5 M194 98.5 q5 -3 10.5 .5" fill="none" stroke="#33241f" stroke-width="1.7"/>
-            <path d="M174.5 107 q5 -5 10 0 M193.5 107 q5 -5 10 0" fill="none" stroke="#33241f" stroke-width="2"/>
-            <ellipse cx="174" cy="116" rx="6" ry="3.4" fill="#f1a39e" opacity=".5" stroke="none"/><ellipse cx="204" cy="116" rx="6" ry="3.4" fill="#f1a39e" opacity=".5" stroke="none"/>
-            <path d="M188 111 q1.6 3 -1 4" fill="none" stroke="#c99a82" stroke-width="1.1"/>
-            <path d="M182 119 Q189 128 196 119 Q189 121.5 182 119Z" fill="#a9524a" stroke="#5b4037" stroke-width="1.1"/>
-            <path d="M185 123.5 Q189 126 193 123.5" fill="#ec918e" stroke="none"/>
+
+            <!-- Expressive Eyebrows: soft, friendly -->
+            <path d="M172 98 q6 -3.5 11 -0.5 M193 97.5 q5.5 -3 11 0.5" fill="none" stroke="#2c1e19" stroke-width="1.8"/>
+
+            <!-- Sweet Smiling Eyes with pupils and catchlight sparkle (References 1, 2, 3) -->
+            <!-- Left Eye -->
+            <g stroke="none">
+              <path d="M172 106 Q178 101 184 106" fill="none" stroke="#2c1e19" stroke-width="2" stroke-linecap="round"/>
+              <ellipse cx="178" cy="107" rx="3" ry="3.5" fill="#2d1c16"/>
+              <circle cx="179.2" cy="105.8" r="1.1" fill="#ffffff"/>
+              <circle cx="177" cy="108" r="0.5" fill="#ffffff"/>
+            </g>
+            <!-- Right Eye -->
+            <g stroke="none">
+              <path d="M192 106 Q198 101 204 106" fill="none" stroke="#2c1e19" stroke-width="2" stroke-linecap="round"/>
+              <ellipse cx="198" cy="107" rx="3" ry="3.5" fill="#2d1c16"/>
+              <circle cx="199.2" cy="105.8" r="1.1" fill="#ffffff"/>
+              <circle cx="197" cy="108" r="0.5" fill="#ffffff"/>
+            </g>
+
+            <!-- Cute Blushing Cheeks (References 1, 2, 3) -->
+            <ellipse cx="173" cy="116" rx="8" ry="4.5" fill="url(#pipiBlush)" stroke="none"/>
+            <ellipse cx="203" cy="116" rx="8" ry="4.5" fill="url(#pipiBlush)" stroke="none"/>
+
+            <!-- Cute nose -->
+            <path d="M187 110 q1.8 3.5 -1.2 4.5" fill="none" stroke="#bf8f75" stroke-width="1.2"/>
+
+            <!-- Warm Joyful Smile with glossy lip tone -->
+            <path d="M181 119 Q188 129 195 119 Q188 122 181 119Z" fill="#b8544d" stroke="#4f3830" stroke-width="1.1"/>
+            <path d="M184 122.5 Q188 126 192 122.5" fill="#f79893" stroke="none"/>
           </g>
         </g>
       </g>
     </symbol>
 
+    <!-- ===== Upgraded Bride (figBaruWanita): Sweet, glowing blush cheeks, exquisite Siger Sunda, lace kebaya, and cascading bouquet (References 1, 2, 3, 4) ===== -->
     <symbol id="figBaruWanita" viewBox="0 0 300 400">
-      <g stroke="#5b4037" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
-        <!-- sheer veil, flowing behind and pooling on the floor -->
-        <path d="M100 86 C72 116 60 196 56 276 C53 330 54 366 44 394 L150 396 C138 338 134 260 140 160 Z" fill="#ffffff" fill-opacity=".6" stroke="#e7dbd3" stroke-width="1"/>
-        <path d="M82 150 C72 214 68 300 62 386 M100 166 C94 236 92 318 96 394" fill="none" stroke="#eee3dc" stroke-width="1"/>
-        <!-- batik sinjang: fitted, wiru pleats down the front -->
+      <g stroke="#4f3830" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
+        <!-- Sheer Bridal Veil: Flowing gracefully behind with delicate embroidery and pearl sparkles -->
+        <path d="M98 84 C68 116 54 196 50 276 C47 330 48 368 38 396 L154 396 C142 338 138 260 144 160 Z" fill="#ffffff" fill-opacity="0.65" stroke="#e8ded8" stroke-width="1"/>
+        <path d="M78 150 C68 214 64 300 58 388 M98 166 C92 236 90 318 94 394" fill="none" stroke="#f2e8e2" stroke-width="1"/>
+        <!-- Shimmering pearl dots along the veil -->
+        <g fill="#ffffff" stroke="none" opacity="0.8">
+          <circle cx="62" cy="240" r="1.5"/><circle cx="56" cy="310" r="1.5"/>
+          <circle cx="72" cy="350" r="1.5"/><circle cx="84" cy="280" r="1.5"/>
+        </g>
+
+        <!-- Batik Sinjang: Pleated wiru down the front with rich gold highlights -->
         <path d="M87 258 C84 300 88 344 84 394 L156 394 C152 344 155 300 151 258Z" fill="url(#batikKain)"/>
         <path d="M87 258 C84 300 88 344 84 394 L156 394 C152 344 155 300 151 258Z" fill="url(#cahayaKain)" stroke="none"/>
         <path d="M86 330 C87 356 87 376 84 394 L156 394 C153 376 152 356 153 330Z" fill="url(#bayanganBawah)" stroke="none"/>
-        <path d="M122 262 C121 300 119 340 117 394 M127 262 C127 300 127 340 126 394" fill="none" stroke="#f6ead8" stroke-width="1.6" opacity=".9"/>
+        <path d="M122 262 C121 300 119 340 117 394 M127 262 C127 300 127 340 126 394" fill="none" stroke="#f6ead8" stroke-width="1.6" opacity=".95"/>
         <path d="M117 394 l4.5 -6 l4.5 6" fill="none" stroke-width=".9"/>
-        <!-- upper body leans toward the groom -->
+
+        <!-- Upper body leans lovingly toward the groom -->
         <g transform="rotate(3 118 262)">
-          <!-- kebaya: fitted waist, lace, scalloped hem -->
-          <path d="M90 168 C83 186 84 212 88 232 C88 246 85 260 84 272 C100 281 136 281 152 272 C151 260 148 246 148 232 C152 212 153 186 146 168 C136 159 100 159 90 168Z" fill="#fdf8f1"/>
+          <!-- Kebaya: Fitted waist, delicate scalloped hem, floral lace overlay -->
+          <path d="M90 168 C83 186 84 212 88 232 C88 246 85 260 84 272 C100 281 136 281 152 272 C151 260 148 246 148 232 C152 212 153 186 146 168 C136 159 100 159 90 168Z" fill="#fffdfa"/>
           <path d="M90 168 C83 186 84 212 88 232 C88 246 85 260 84 272 C100 281 136 281 152 272 C151 260 148 246 148 232 C152 212 153 186 146 168 C136 159 100 159 90 168Z" fill="url(#renda)" stroke="none"/>
           <path d="M90 168 C83 186 84 212 88 232 C88 246 85 260 84 272 C100 281 136 281 152 272 C151 260 148 246 148 232 C152 212 153 186 146 168 C136 159 100 159 90 168Z" fill="url(#cahayaKain)" stroke="none"/>
-          <path d="M84 272 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0" fill="#fdf8f1" stroke-width=".9"/>
+          <!-- Scalloped peplum hem -->
+          <path d="M84 272 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0 q4 6 8.5 0" fill="#fffdfa" stroke-width=".9"/>
+
+          <!-- Golden brooch & buttons down the front -->
           <path d="M119 166 C118 200 118 236 119 276" fill="none" stroke="#e5d3c4" stroke-width="1"/>
-          <g fill="url(#emas)" stroke="#9c7a3c" stroke-width=".6"><circle cx="119" cy="194" r="3"/><circle cx="119" cy="207" r="2.6"/></g>
-          <!-- sleeves -->
-          <path d="M91 172 C78 196 78 230 99 250 L111 243 C97 227 96 200 101 180Z" fill="#fcf5ec"/>
-          <path d="M91 172 C78 196 78 230 99 250 L111 243 C97 227 96 200 101 180Z" fill="url(#renda)" stroke="none" opacity=".8"/>
-          <path d="M145 172 C158 196 157 228 139 250 L127 243 C140 227 141 200 136 180Z" fill="#fcf5ec"/>
+          <g fill="url(#emasKilau)" stroke="#9c7a3c" stroke-width=".6">
+            <circle cx="119" cy="192" r="3.2"/>
+            <circle cx="119" cy="206" r="2.8"/>
+            <circle cx="119" cy="220" r="2.5"/>
+          </g>
+
+          <!-- Sleeves with lace texture and delicate cuffs -->
+          <path d="M91 172 C78 196 78 230 99 250 L111 243 C97 227 96 200 101 180Z" fill="#fffaf4"/>
+          <path d="M91 172 C78 196 78 230 99 250 L111 243 C97 227 96 200 101 180Z" fill="url(#renda)" stroke="none" opacity=".85"/>
+          <path d="M145 172 C158 196 157 228 139 250 L127 243 C140 227 141 200 136 180Z" fill="#fffaf4"/>
           <path d="M145 172 C158 196 157 228 139 250 L134 246 C152 226 153 196 141 176Z" fill="#5e4036" opacity=".07" stroke="none"/>
-          <!-- hands -->
-          <path d="M109 250 c-6 0 -10 -4 -9 -8 c1 -4 6 -5 11 -3 c4 1 5 5 4 8 c-1 2 -3 3 -6 3z" fill="#f5d6bd"/>
-          <path d="M130 250 c6 0 10 -4 9 -8 c-1 -4 -6 -5 -11 -3 c-4 1 -5 5 -4 8 c1 2 3 3 6 3z" fill="#f5d6bd"/>
-          <!-- cascading bouquet with satin ribbon -->
+
+          <!-- Hands gently holding the bouquet -->
+          <path d="M109 250 c-6 0 -10 -4 -9 -8 c1 -4 6 -5 11 -3 c4 1 5 5 4 8 c-1 2 -3 3 -6 3z" fill="url(#kulitWanita)"/>
+          <path d="M130 250 c6 0 10 -4 9 -8 c-1 -4 -6 -5 -11 -3 c-4 1 -5 5 -4 8 c1 2 3 3 6 3z" fill="url(#kulitWanita)"/>
+
+          <!-- Cascading Wedding Bouquet: blush roses, white tulips, baby's breath & flowing ribbons (References 1, 3, 4) -->
           <g stroke="none">
-            <path d="M113 254 C110 270 106 286 102 300 C106 296 108 292 110 286 C112 296 112 306 110 316 C116 304 117 288 117 272Z" fill="#f6ecdf" stroke="#d8c6b0" stroke-width=".8"/>
-            <path d="M124 254 C128 270 132 286 138 298 C134 296 132 292 130 288 C130 298 132 308 136 316 C128 306 125 290 122 272Z" fill="#efe1d0" stroke="#d8c6b0" stroke-width=".8"/>
-            <use href="#daun" x="84" y="232" width="30" height="15" style="color: var(--daun-1)" transform="rotate(-30 99 239)"/>
-            <use href="#daun" x="126" y="230" width="30" height="15" style="color: var(--daun-2)" transform="rotate(26 141 237)"/>
-            <use href="#daun" x="102" y="262" width="26" height="12" style="color: var(--daun-2)" transform="rotate(82 115 268)"/>
-            <use href="#daun" x="112" y="272" width="22" height="10" style="color: var(--daun-1)" transform="rotate(100 123 277)"/>
-            <use href="#mawar" x="96" y="226" width="22" height="22" style="color: var(--aksen)"/>
-            <use href="#mawar" x="113" y="220" width="24" height="24" style="color: var(--aksen-lemah)"/>
-            <use href="#mawar" x="129" y="230" width="18" height="18" color="#fbf1e1"/>
-            <use href="#mawar" x="106" y="238" width="21" height="21" style="color: var(--aksen)"/>
-            <use href="#mawar" x="122" y="242" width="17" height="17" color="#fbf1e1"/>
-            <use href="#mawar" x="112" y="256" width="14" height="14" style="color: var(--aksen-lemah)"/>
-            <use href="#mawar" x="114" y="268" width="10" height="10" style="color: var(--aksen)"/>
-            <use href="#hambalan" x="130" y="220" width="15" height="15"/><use href="#hambalan" x="92" y="222" width="13" height="13"/><use href="#hambalan" x="122" y="258" width="11" height="11"/>
+            <!-- Flowing satin ribbons -->
+            <path d="M113 254 C108 274 104 294 98 316 C104 308 107 300 110 290 C112 302 112 318 108 332 C116 314 117 292 117 272Z" fill="url(#pitaHalus)" stroke="#d8c6b0" stroke-width=".7"/>
+            <path d="M124 254 C130 274 135 294 142 316 C136 308 133 300 130 290 C130 302 132 318 138 332 C129 314 125 292 122 272Z" fill="url(#pitaHalus)" stroke="#d8c6b0" stroke-width=".7"/>
+            <!-- Foliage leaves -->
+            <use href="#daun" x="82" y="230" width="32" height="16" style="color: var(--daun-1)" transform="rotate(-30 98 238)"/>
+            <use href="#daun" x="126" y="228" width="32" height="16" style="color: var(--daun-2)" transform="rotate(26 142 236)"/>
+            <use href="#daun" x="100" y="264" width="28" height="13" style="color: var(--daun-2)" transform="rotate(82 114 270)"/>
+            <use href="#daun" x="112" y="274" width="24" height="11" style="color: var(--daun-1)" transform="rotate(100 124 279)"/>
+
+            <!-- White Tulips & Soft Roses -->
+            <ellipse cx="118" cy="226" rx="8" ry="11" fill="#fffef8" stroke="#d5c8b5" stroke-width="0.8"/>
+            <path d="M114 220 C118 226 118 232 118 237 M122 220 C118 226 118 232 118 237" fill="none" stroke="#d5c8b5" stroke-width="0.7"/>
+            <use href="#mawar" x="96" y="224" width="24" height="24" style="color: var(--aksen)"/>
+            <use href="#mawar" x="113" y="218" width="26" height="26" style="color: var(--aksen-lemah)"/>
+            <use href="#mawar" x="129" y="228" width="20" height="20" color="#fbf1e1"/>
+            <use href="#mawar" x="106" y="236" width="22" height="22" style="color: var(--aksen)"/>
+            <use href="#mawar" x="122" y="240" width="18" height="18" color="#fbf1e1"/>
+            <use href="#mawar" x="112" y="254" width="15" height="15" style="color: var(--aksen-lemah)"/>
+            <use href="#mawar" x="114" y="266" width="12" height="12" style="color: var(--aksen)"/>
+            <!-- Baby's breath sprinkles -->
+            <use href="#hambalan" x="130" y="218" width="16" height="16"/>
+            <use href="#hambalan" x="90" y="220" width="14" height="14"/>
+            <use href="#hambalan" x="122" y="256" width="12" height="12"/>
           </g>
-          <!-- hijab: soft drape with folds and a highlight -->
-          <path d="M86 100 C83 70 103 55 122 57 C142 59 157 76 155 102 C157 124 160 142 162 160 C152 178 135 186 119 186 C101 186 85 178 77 162 C82 140 86 122 86 100Z" fill="#fffaf4"/>
-          <path d="M92 74 C100 63 112 59 122 59 C112 64 104 70 98 80Z" fill="#fff" stroke="none"/>
-          <path d="M89 140 C95 157 104 169 116 178 M152 138 C148 155 140 167 128 176 M81 158 C91 171 104 179 119 181" fill="none" stroke-width="1" opacity=".3"/>
-          <path d="M86 150 C90 166 102 176 119 180 C136 180 148 170 157 154 C153 170 138 184 119 185 C100 185 88 172 86 150Z" fill="#5e4036" opacity=".07" stroke="none"/>
-          <path d="M147 92 C154 110 156 132 160 156 C154 140 150 118 147 92Z" fill="#5e4036" opacity=".06" stroke="none"/>
-          <!-- face, tilted toward the groom -->
-          <g transform="rotate(8 121 112)">
+
+          <!-- Hijab: Pure elegant ivory drape with soft folds -->
+          <path d="M86 100 C83 70 103 54 122 56 C142 58 157 75 155 102 C157 124 160 142 162 160 C152 178 135 186 119 186 C101 186 85 178 77 162 C82 140 86 122 86 100Z" fill="#fffdfa"/>
+          <path d="M92 74 C100 63 112 58 122 58 C112 63 104 69 98 79Z" fill="#fff" stroke="none"/>
+          <path d="M89 140 C95 157 104 169 116 178 M152 138 C148 155 140 167 128 176 M81 158 C91 171 104 179 119 181" fill="none" stroke-width="1" opacity=".28"/>
+
+          <!-- Face (loving, joyful tilt toward the groom) -->
+          <g transform="rotate(7 121 112)">
             <path d="M98 108 C98 88 108 82 121 82 C134 82 144 88 144 108 C144 126 134 138 121 138 C108 138 98 126 98 108Z" fill="#eadbd0" stroke="none"/>
-            <path d="M100 108 C100 90 109 85 121 85 C133 85 142 90 142 108 C142 125 133 135 121 135 C109 135 100 125 100 108Z" fill="#f6dac7"/>
-            <path d="M134 90 C140 98 142 108 141 118 C137 108 136 98 134 90Z" fill="#e9bfa6" opacity=".45" stroke="none"/>
-            <path d="M108 113 q5.5 -5.5 11 0 M124 113 q5.5 -5.5 11 0" fill="none" stroke="#33241f" stroke-width="2"/>
-            <path d="M107.5 112.5 l-2.6 -1.4 M135.5 112.5 l2.6 -1.4" fill="none" stroke="#33241f" stroke-width="1.2"/>
-            <ellipse cx="108" cy="122" rx="5.6" ry="3.2" fill="#f2a7a6" opacity=".55" stroke="none"/><ellipse cx="135" cy="122" rx="5.6" ry="3.2" fill="#f2a7a6" opacity=".55" stroke="none"/>
-            <path d="M121.5 118 q1.4 2.6 -1 3.6" fill="none" stroke="#d3a58e" stroke-width="1"/>
-            <path d="M116.5 127 q5 4.5 10 0" fill="none" stroke="#9a4c45" stroke-width="1.5"/>
+            <path d="M100 108 C100 90 109 85 121 85 C133 85 142 90 142 108 C142 125 133 135 121 135 C109 135 100 125 100 108Z" fill="url(#kulitWanita)"/>
+
+            <!-- Delicate Eyebrows -->
+            <path d="M106 103 q5.5 -3 11 0 M124 103 q5.5 -3 11 0" fill="none" stroke="#2c1e19" stroke-width="1.6"/>
+
+            <!-- Sweet, Bright Smiling Eyes with fluttery lashes & twin catchlights (References 1, 2, 3) -->
+            <!-- Left Eye -->
+            <g stroke="none">
+              <path d="M106 111 Q111.5 105 117 111" fill="none" stroke="#2c1e19" stroke-width="2.1" stroke-linecap="round"/>
+              <path d="M105 110 l-2.8 -1.8 M118 110 l2.5 -1.5" fill="none" stroke="#2c1e19" stroke-width="1.2"/>
+              <ellipse cx="111.5" cy="111.5" rx="3.2" ry="3.6" fill="#2d1c16"/>
+              <circle cx="112.8" cy="110.3" r="1.2" fill="#ffffff"/>
+              <circle cx="110.5" cy="112.5" r="0.55" fill="#ffffff"/>
+            </g>
+            <!-- Right Eye -->
+            <g stroke="none">
+              <path d="M124 111 Q129.5 105 135 111" fill="none" stroke="#2c1e19" stroke-width="2.1" stroke-linecap="round"/>
+              <path d="M123 110 l-2.5 -1.5 M136 110 l2.8 -1.8" fill="none" stroke="#2c1e19" stroke-width="1.2"/>
+              <ellipse cx="129.5" cy="111.5" rx="3.2" ry="3.6" fill="#2d1c16"/>
+              <circle cx="130.8" cy="110.3" r="1.2" fill="#ffffff"/>
+              <circle cx="128.5" cy="112.5" r="0.55" fill="#ffffff"/>
+            </g>
+
+            <!-- Rosy Blushing Cheeks (References 1, 2, 3) -->
+            <ellipse cx="107" cy="121" rx="8" ry="4.5" fill="url(#pipiBlush)" stroke="none"/>
+            <ellipse cx="134" cy="121" rx="8" ry="4.5" fill="url(#pipiBlush)" stroke="none"/>
+
+            <!-- Cute button nose -->
+            <path d="M121 116 q1.4 2.8 -1 3.8" fill="none" stroke="#c99780" stroke-width="1.1"/>
+
+            <!-- Sweet, Loving Smile with Glossy Pink Lips -->
+            <path d="M115 126.5 Q121 133 127 126.5 Q121 128.5 115 126.5Z" fill="#d95d66" stroke="#4f3830" stroke-width="1.1"/>
+            <path d="M118 128 Q121 130.5 124 128" fill="#ffa8b0" stroke="none"/>
           </g>
-          <!-- siger, kembang goyang and jasmine strands -->
-          <use href="#siger" x="86" y="43" width="72" height="35" transform="rotate(8 122 61)" stroke="none"/>
-          <path d="M91 78 C80 110 80 150 87 186" fill="none" stroke="#d9cbb8" stroke-width="5.6" stroke-dasharray="0.1 6"/>
-          <path d="M91 78 C80 110 80 150 87 186" fill="none" stroke="#fffdf8" stroke-width="4" stroke-dasharray="0.1 6"/>
-          <path d="M153 82 C161 106 161 132 157 154" fill="none" stroke="#d9cbb8" stroke-width="5.6" stroke-dasharray="0.1 6"/>
-          <path d="M153 82 C161 106 161 132 157 154" fill="none" stroke="#fffdf8" stroke-width="4" stroke-dasharray="0.1 6"/>
-          <g stroke="none"><use href="#mawar" x="146" y="68" width="13" height="13" style="color: var(--aksen)"/><use href="#hambalan" x="83" y="70" width="12" height="12"/></g>
+
+          <!-- Regal Sundanese Siger Crown & Cascading Ronce Melati (References 1 & 2) -->
+          <g transform="rotate(7 122 61)" stroke="none">
+            <!-- Siger Crown -->
+            <use href="#siger" x="84" y="41" width="76" height="37"/>
+            <!-- Center sparkling gem -->
+            <circle cx="122" cy="65" r="3" fill="#ffffff" filter="url(#cahayaLampu)"/>
+            <circle cx="122" cy="65" r="1.5" fill="#fff"/>
+          </g>
+
+          <!-- Cascading Ronce Melati (Jasmine Garlands cascading down the shoulder) -->
+          <path d="M91 78 C79 110 79 150 86 188" fill="none" stroke="#d5c7b3" stroke-width="5.8" stroke-dasharray="0.1 6.2"/>
+          <path d="M91 78 C79 110 79 150 86 188" fill="none" stroke="#ffffff" stroke-width="4.2" stroke-dasharray="0.1 6.2"/>
+          <!-- Right side ronce melati -->
+          <path d="M153 82 C162 106 162 132 158 156" fill="none" stroke="#d5c7b3" stroke-width="5.8" stroke-dasharray="0.1 6.2"/>
+          <path d="M153 82 C162 106 162 132 158 156" fill="none" stroke="#ffffff" stroke-width="4.2" stroke-dasharray="0.1 6.2"/>
+          <g stroke="none">
+            <use href="#mawar" x="146" y="68" width="14" height="14" style="color: var(--aksen)"/>
+            <use href="#hambalan" x="82" y="70" width="13" height="13"/>
+          </g>
         </g>
       </g>
     </symbol>
 
+    <!-- Couple together -->
     <symbol id="pasanganBaru" viewBox="0 0 300 400">
       <ellipse cx="152" cy="394" rx="98" ry="7" fill="#5e4036" opacity=".12"/>
-      <use href="#figBaruPria" transform="translate(5 0)"/>
+      <use href="#figBaruPria" transform="translate(6 0)"/>
       <use href="#figBaruWanita"/>
     </symbol>
   </defs>
