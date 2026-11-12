@@ -23,7 +23,7 @@ window.UNDANGAN = {
       ayah: "Bapak Asep Saepudin",
       ibu: "Ibu Neneng Kurniasih",
       instagram: "",          // mis. "annisa.rhm"
-      foto: "",               // URL/path foto, mis. "foto/nisa.jpg"
+      foto: "foto/nisa.jpg",  // URL/path foto, mis. "foto/nisa.jpg"
       aksara: ""              // isi manual jika transliterasi otomatis kurang pas
     },
     pria: {
@@ -33,7 +33,7 @@ window.UNDANGAN = {
       ayah: "Bapak H. Dadang Suherman",
       ibu: "Ibu Hj. Euis Kartika",
       instagram: "",
-      foto: "",
+      foto: "foto/raka.jpg",
       aksara: ""
     }
   },
@@ -81,7 +81,7 @@ window.UNDANGAN = {
 
   /* Foto berdua untuk polaroid di sampul & penutup, mis. "foto/berdua.jpg".
      Kosong = memakai ilustrasi pasangan bawaan. */
-  fotoBerdua: "",
+  fotoBerdua: "foto/berdua.jpg",
   hashtag: "#NisaDanRaka",
 
   /* Dress code. Kosongkan `warna` untuk menyembunyikan. */
