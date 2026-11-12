@@ -35,36 +35,123 @@
       <feGaussianBlur in="d" stdDeviation=".45"/>
     </filter>
 
-    <!-- botanical pieces (colors follow the theme) -->
-    <symbol id="daunBuleud" viewBox="-10 -14 20 28"><path d="M0 -13 C9 -9 9 9 0 13 C-9 9 -9 -9 0 -13Z" fill="currentColor" fill-opacity=".78"/><path d="M0 -11 V11" stroke="#fff" stroke-opacity=".35" stroke-width=".8"/></symbol>
-    <symbol id="daunPanjang" viewBox="-6 -20 12 40"><path d="M0 -19 C6 -10 6 10 0 19 C-6 10 -6 -10 0 -19Z" fill="currentColor" fill-opacity=".8"/><path d="M0 -17 V17" stroke="#fff" stroke-opacity=".3" stroke-width=".7"/></symbol>
-    <symbol id="kembangBodas" viewBox="-12 -12 24 24">
-      <g style="fill: var(--kembang)" stroke="#e5dfcc" stroke-width=".5">
-        <ellipse cy="-6" rx="4.4" ry="6.4"/><ellipse cy="-6" rx="4.4" ry="6.4" transform="rotate(72)"/><ellipse cy="-6" rx="4.4" ry="6.4" transform="rotate(144)"/><ellipse cy="-6" rx="4.4" ry="6.4" transform="rotate(216)"/><ellipse cy="-6" rx="4.4" ry="6.4" transform="rotate(288)"/>
+        <!-- Aesthetic Watercolor Botanical Components & Gradients -->
+    <radialGradient id="gradMawar" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fff8f6"/>
+      <stop offset="35%" stop-color="#fcaaa1"/>
+      <stop offset="70%" stop-color="#e86b62"/>
+      <stop offset="100%" stop-color="#b83f3b"/>
+    </radialGradient>
+    <radialGradient id="gradPeoni" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fff9f7"/>
+      <stop offset="35%" stop-color="#fcd0cb"/>
+      <stop offset="70%" stop-color="#f28e85"/>
+      <stop offset="100%" stop-color="#c9564e"/>
+    </radialGradient>
+    <linearGradient id="gradEukaliptus" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b7cdb5"/>
+      <stop offset="60%" stop-color="#8ba788"/>
+      <stop offset="100%" stop-color="#648061"/>
+    </linearGradient>
+    <linearGradient id="gradDaunPanjang" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c2d6be"/>
+      <stop offset="50%" stop-color="#93ae8f"/>
+      <stop offset="100%" stop-color="#6b8668"/>
+    </linearGradient>
+    <radialGradient id="gradKembangBodas" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#fcf6ec"/>
+      <stop offset="100%" stop-color="#ebdcc7"/>
+    </radialGradient>
+    <radialGradient id="gradPistil" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe699"/>
+      <stop offset="60%" stop-color="#e6ad35"/>
+      <stop offset="100%" stop-color="#b37714"/>
+    </radialGradient>
+
+    <symbol id="daunBuleud" viewBox="-12 -16 24 32">
+      <path d="M0 -14 C10 -14 12 0 0 14 C-12 0 -10 -14 0 -14 Z" fill="url(#gradEukaliptus)" fill-opacity="0.88"/>
+      <path d="M0 -12 V12" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.45"/>
+      <path d="M0 -6 Q4 -3 7 -5 M0 -1 Q5 2 8 0 M0 5 Q4 8 6 6" fill="none" stroke="#ffffff" stroke-width="0.55" stroke-opacity="0.35"/>
+    </symbol>
+    <symbol id="daunPanjang" viewBox="-8 -24 16 48">
+      <path d="M0 -22 C8 -12 8 12 0 22 C-8 12 -8 -12 0 -22 Z" fill="url(#gradDaunPanjang)" fill-opacity="0.88"/>
+      <path d="M0 -20 V20" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.45"/>
+      <path d="M0 -10 Q4 -6 6 -8 M0 0 Q4 4 6 2 M0 10 Q3 14 5 12" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.3"/>
+    </symbol>
+    <symbol id="kembangBodas" viewBox="-14 -14 28 28">
+      <g fill="url(#gradKembangBodas)" stroke="#e8dbc7" stroke-width="0.5">
+        <path d="M0 0 C-4 -5 -5 -11 0 -13 C5 -11 4 -5 0 0 Z"/>
+        <path d="M0 0 C-4 -5 -5 -11 0 -13 C5 -11 4 -5 0 0 Z" transform="rotate(72)"/>
+        <path d="M0 0 C-4 -5 -5 -11 0 -13 C5 -11 4 -5 0 0 Z" transform="rotate(144)"/>
+        <path d="M0 0 C-4 -5 -5 -11 0 -13 C5 -11 4 -5 0 0 Z" transform="rotate(216)"/>
+        <path d="M0 0 C-4 -5 -5 -11 0 -13 C5 -11 4 -5 0 0 Z" transform="rotate(288)"/>
       </g>
-      <circle r="2.8" style="fill: var(--kembang-tengah)"/>
+      <circle r="2.5" fill="url(#gradPistil)"/>
+      <g fill="#d4941e" stroke="none">
+        <circle cx="-1.8" cy="-1.8" r="0.6"/><circle cx="1.8" cy="-1.8" r="0.6"/>
+        <circle cx="2.2" cy="0.8" r="0.6"/><circle cx="-0.8" cy="2.2" r="0.6"/><circle cx="-2.2" cy="0.5" r="0.6"/>
+      </g>
     </symbol>
-    <symbol id="kuncup" viewBox="-5 -8 10 16"><path d="M0 -7 C4 -3 4 3 0 7 C-4 3 -4 -3 0 -7Z" style="fill: var(--aksen-lemah)" stroke="#e8c6cc" stroke-width=".6"/></symbol>
-    <symbol id="stroberi" viewBox="-12 -14 24 28">
-      <path d="M0 13 C-10 6 -11 -4 -6 -7 C-3 -9 3 -9 6 -7 C11 -4 10 6 0 13Z" style="fill: var(--aksen)"/>
-      <g fill="#fff6d6" opacity=".9"><ellipse cx="-4" cy="-2" rx=".8" ry="1.2"/><ellipse cx="2" cy="-3" rx=".8" ry="1.2"/><ellipse cx="5" cy="2" rx=".8" ry="1.2"/><ellipse cx="-2" cy="4" rx=".8" ry="1.2"/><ellipse cx="1" cy="8" rx=".8" ry="1.2"/><ellipse cx="-6" cy="3" rx=".8" ry="1.2"/></g>
-      <path d="M0 -8 L-7 -11 L-3 -7 L-8 -5 L-1 -6 L0 -1 L1 -6 L8 -5 L3 -7 L7 -11Z" style="fill: var(--daun-2)"/>
-      <path d="M0 -9 V-13" style="stroke: var(--daun-2)" stroke-width="1.4"/>
+    <symbol id="kuncup" viewBox="-8 -12 16 24">
+      <path d="M0 -10 C6 -5 6 4 0 10 C-6 4 -6 -5 0 -10 Z" fill="url(#gradPeoni)"/>
+      <path d="M-4 2 C-6 6 -3 10 0 11 C3 10 6 6 4 2 C2 7 -2 7 -4 2 Z" fill="url(#gradEukaliptus)"/>
+      <path d="M-6 0 C-4 -6 -1 -9 0 -11 C-1 -6 -3 2 -6 0 Z" fill="#658261"/>
+      <path d="M6 0 C4 -6 1 -9 0 -11 C1 -6 3 2 6 0 Z" fill="#789973"/>
+      <path d="M0 11 V15" stroke="#658261" stroke-width="1.2"/>
     </symbol>
-    <symbol id="hambalan" viewBox="-6 -6 12 12"><g fill="#fffdf6"><circle r="1.6" cx="-2.6" cy="-1"/><circle r="1.4" cx="2.4" cy="-2.2"/><circle r="1.5" cx="1.6" cy="2.6"/><circle r="1.2" cx="-2" cy="3"/><circle r="1.1"/></g></symbol>
-    <symbol id="mawar" viewBox="-10 -10 20 20">
-      <circle r="9.4" fill="currentColor"/><circle r="9.4" fill="url(#sorotan)"/>
-      <path d="M-9 1 C-8.5 -6 -2.5 -9.4 3 -8.6 C-2 -6.4 -5.4 -2.4 -5.4 3Z" fill="#fff" fill-opacity=".24"/>
-      <path d="M-7 4 C-4.5 9.2 5 9.2 7.6 3 C4.5 6.2 -2 7.4 -7 4Z" fill="#5a1a2a" fill-opacity=".12"/>
-      <path d="M-8.4 -2.6 C-7.4 -7 -3 -9.2 1.4 -9 M8.6 -1.6 C8.6 3.4 6 6.6 1.6 8.2 M-7.6 3.6 C-6 6.6 -3 8 0 8" fill="none" stroke="#6e2638" stroke-opacity=".2" stroke-width=".8" stroke-linecap="round"/>
-      <path d="M-5.2 -.6 C-4.4 -5 3 -6 5.2 -1.8 C6.4 2.2 2.4 5.2 -1 4.2 C-4 3.2 -5.4 1.4 -5.2 -.6Z" fill="none" stroke="#6e2638" stroke-opacity=".24" stroke-width=".85"/>
-      <path d="M-2.2 -.8 C-1.4 -3.2 2.2 -3.2 2.4 -.8 C2.5 1.2 .2 2 -1 1" fill="none" stroke="#6e2638" stroke-opacity=".32" stroke-width=".8" stroke-linecap="round"/>
+    <symbol id="peoni" viewBox="-18 -18 36 36">
+      <circle r="15" fill="url(#gradPeoni)"/>
+      <path d="M-14 -4 C-16 -12 -6 -16 2 -14 C10 -13 16 -5 14 3 C12 12 2 16 -6 14 C-14 11 -16 3 -14 -4 Z" fill="#fff" fill-opacity="0.22"/>
+      <path d="M-10 6 C-13 1 -8 -10 2 -10 C11 -9 13 1 8 8 C3 14 -6 12 -10 6 Z" fill="url(#gradPeoni)"/>
+      <path d="M-6 -7 C-1 -12 8 -8 8 -1 C8 6 1 10 -5 7 C-10 4 -9 -3 -6 -7 Z" fill="#fff" fill-opacity="0.32"/>
+      <circle r="2.8" fill="url(#gradPistil)"/>
+      <circle cx="-1.5" cy="-1.5" r="0.7" fill="#fff"/>
     </symbol>
-    <symbol id="daun" viewBox="-12 -6 24 12"><path d="M-11 0 C-5 -6.5 5 -6.5 11 0 C5 6.5 -5 6.5 -11 0Z" fill="currentColor"/></symbol>
-    <symbol id="ranggeuy" viewBox="0 0 160 60">
-      <path d="M10 50 C50 44 90 28 150 8" fill="none" style="stroke: var(--daun-2)" stroke-width="1.6"/>
-      <g style="fill: var(--daun-1)"><path d="M40 44 C36 34 42 26 50 26 C52 36 48 42 40 44Z"/><path d="M64 38 C66 28 76 24 82 28 C78 36 72 40 64 38Z"/><path d="M96 28 C92 18 98 10 106 12 C108 20 104 26 96 28Z"/><path d="M118 22 C122 12 132 10 136 14 C132 22 126 24 118 22Z"/></g>
-      <use href="#kembangBodas" x="20" y="38" width="20" height="20"/><use href="#stroberi" x="80" y="20" width="16" height="18"/><use href="#kembangBodas" x="138" y="0" width="18" height="18"/>
+    <symbol id="stroberi" viewBox="-18 -18 36 36">
+      <use href="#peoni"/>
+    </symbol>
+    <symbol id="hambalan" viewBox="-12 -12 24 24">
+      <path d="M0 10 L0 0 M0 0 L-6 -6 M0 0 L6 -6 M0 0 L-2 -8 M0 0 L3 -8 M-6 -6 L-9 -9 M6 -6 L9 -9" fill="none" stroke="#8fa88c" stroke-width="0.65" stroke-opacity="0.7"/>
+      <g fill="#ffffff" stroke="#e8dfd1" stroke-width="0.35">
+        <circle cx="-6" cy="-6" r="2.2"/><circle cx="6" cy="-6" r="2.2"/>
+        <circle cx="-2" cy="-8" r="1.9"/><circle cx="3" cy="-8" r="1.9"/>
+        <circle cx="-9" cy="-9" r="1.7"/><circle cx="9" cy="-9" r="1.7"/>
+        <circle cx="0" cy="-2" r="2"/>
+      </g>
+    </symbol>
+    <symbol id="mawar" viewBox="-16 -16 32 32">
+      <path d="M-13 -2 C-15 -10 -5 -15 3 -13 C11 -12 15 -4 13 4 C11 12 1 15 -6 13 C-13 11 -15 4 -13 -2 Z" fill="url(#gradMawar)" opacity="0.95"/>
+      <path d="M-10 -7 C-6 -12 6 -12 10 -6 C13 0 10 9 4 11 C-3 12 -10 8 -11 1 C-12 -3 -11 -6 -10 -7 Z" fill="#fff" fill-opacity="0.28"/>
+      <path d="M-8 3 C-11 7 -4 13 4 11 C11 9 12 1 9 -5 C6 -11 -3 -10 -7 -4 Z" fill="#9e322d" fill-opacity="0.15"/>
+      <path d="M-6 -4 C-3 -9 6 -8 8 -2 C9 4 5 8 0 7 C-5 6 -8 2 -6 -4 Z" fill="url(#gradMawar)"/>
+      <path d="M-4 -2 C-1 -6 5 -5 6 -1 C7 3 3 6 0 5 C-4 4 -5 1 -4 -2 Z" fill="#fff" fill-opacity="0.4"/>
+      <path d="M-2 -1 C0 -3 3 -3 3 -1 C4 1 2 3 0 2 C-2 1 -3 0 -2 -1 Z" fill="#8a201b"/>
+      <path d="M-11 -2 C-8 -7 0 -9 6 -6 M8 -2 C11 3 8 9 2 11 M-6 10 C-10 7 -12 2 -9 -3" fill="none" stroke="#fff" stroke-width="0.7" stroke-opacity="0.45" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="daun" viewBox="-14 -7 28 14">
+      <path d="M-13 0 C-6 -8 6 -8 13 0 C6 8 -6 8 -13 0 Z" fill="url(#gradEukaliptus)" fill-opacity="0.9"/>
+      <path d="M-12 0 H12" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.4"/>
+    </symbol>
+    <symbol id="tulip" viewBox="-10 -16 20 32">
+      <path d="M0 8 V16" stroke="#7e9c79" stroke-width="1.6"/>
+      <path d="M-7 4 C-9 -6 -5 -14 0 -14 C5 -14 9 -6 7 4 C4 10 -4 10 -7 4 Z" fill="url(#gradKembangBodas)" stroke="#d9cdb8" stroke-width="0.6"/>
+      <path d="M-3 -13 C0 -15 3 -13 4 -6 C5 2 0 7 -3 4 C-5 1 -4 -7 -3 -13 Z" fill="#ffffff" opacity="0.9"/>
+      <path d="M-5 6 C-4 9 0 10 4 7 C2 8 -2 8 -5 6 Z" fill="#88a683"/>
+    </symbol>
+    <symbol id="ranggeuy" viewBox="0 0 180 70">
+      <path d="M8 58 C55 52 105 32 172 10" fill="none" stroke="#759172" stroke-width="1.8" stroke-linecap="round"/>
+      <use href="#daunBuleud" x="30" y="38" width="22" height="30" transform="rotate(-35 41 53)"/>
+      <use href="#daunPanjang" x="60" y="28" width="18" height="36" transform="rotate(40 69 46)"/>
+      <use href="#daunBuleud" x="95" y="18" width="20" height="28" transform="rotate(-25 105 32)"/>
+      <use href="#daunPanjang" x="130" y="10" width="16" height="32" transform="rotate(35 138 26)"/>
+      <use href="#daunBuleud" x="156" y="2" width="16" height="22" transform="rotate(-15 164 13)"/>
+      <use href="#mawar" x="20" y="32" width="26" height="26"/>
+      <use href="#kembangBodas" x="78" y="20" width="22" height="22"/>
+      <use href="#peoni" x="120" y="8" width="24" height="24"/>
+      <use href="#hambalan" x="48" y="24" width="18" height="18"/>
+      <use href="#hambalan" x="145" y="4" width="16" height="16"/>
+      <use href="#kuncup" x="104" y="6" width="12" height="18" transform="rotate(30 110 15)"/>
     </symbol>
     <!-- ribbon banner -->
     <symbol id="pita" viewBox="0 0 260 60">

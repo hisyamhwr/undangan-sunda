@@ -80,12 +80,13 @@
         put(g, st.leaf, x + nx / nl * off, y + ny / nl * off, w, sz, ang + 90 + side * 48 + between(-10, 10), LEAF[k % 3]);
       }
     });
-    // blossoms gathered near the corner
+    // blossoms gathered near the corner (aesthetic English garden roses, peonies, jasmine, baby's breath)
     [[38, 34, 34], [66, 22, 26], [22, 66, 28], [58, 58, 22], [92, 40, 18], [36, 96, 18]].forEach(([x, y, s]) => put(g, "kembangBodas", x, y, s, s, between(0, 70)));
-    put(g, "stroberi", 104, 96, 18, 21, -18);
-    put(g, "stroberi", 120, 70, 14, 16, 12);
-    [[82, 66], [50, 84], [112, 30], [28, 118]].forEach(([x, y]) => put(g, "kuncup", x, y, 8, 13, between(-40, 40)));
-    [[74, 48], [46, 72], [100, 58]].forEach(([x, y]) => put(g, "hambalan", x, y, 14, 14));
+    put(g, "peoni", 104, 96, 26, 26, -18);
+    put(g, "mawar", 120, 70, 24, 24, 12);
+    put(g, "mawar", 48, 48, 28, 28, between(0, 45));
+    [[82, 66], [50, 84], [112, 30], [28, 118]].forEach(([x, y]) => put(g, "kuncup", x, y, 9, 14, between(-40, 40)));
+    [[74, 48], [46, 72], [100, 58], [32, 120], [122, 38]].forEach(([x, y]) => put(g, "hambalan", x, y, 16, 16));
   }
 
   /* ---------- wreaths and the oval frame ---------- */
@@ -99,10 +100,10 @@
     }
     const flowers = (deg, list) => list.forEach(([d, s, id]) => {
       const a = (deg + d) * Math.PI / 180;
-      put(g, id || "kembangBodas", cx + rx * Math.cos(a), cy + ry * Math.sin(a), s, id === "stroberi" ? s * 1.15 : s, between(0, 60));
+      put(g, id || "kembangBodas", cx + rx * Math.cos(a), cy + ry * Math.sin(a), s, s, between(0, 60));
     });
-    flowers(90, [[-16, 22], [0, 28], [14, 20], [-30, 14, "kuncup"], [26, 16, "stroberi"], [6, 12, "hambalan"]]);
-    flowers(232, [[0, 18], [10, 12, "kuncup"], [-8, 12, "hambalan"]]);
+    flowers(90, [[-20, 26, "peoni"], [0, 32, "mawar"], [18, 24, "kembangBodas"], [-32, 16, "kuncup"], [28, 22, "peoni"], [8, 16, "hambalan"]]);
+    flowers(232, [[0, 24, "mawar"], [14, 16, "kuncup"], [-10, 16, "hambalan"]]);
   }
   $$("[data-karangan]").forEach((g, i) => {
     R = rng(500 + i);
@@ -130,7 +131,7 @@
     [[40, 46], [118, 70], [205, 38], [290, 62], [372, 44], [446, 66]].forEach(([x, L], i) => {
       svgEl("path", { d: `M${x} 10 C${x - 4} ${10 + L * .4} ${x + 4} ${10 + L * .7} ${x} ${10 + L}`, fill: "none", style: "stroke: var(--daun-2)", "stroke-width": 1, "stroke-opacity": .6 }, g);
       for (let y = 20; y < 10 + L; y += 11) put(g, "daunBuleud", x + (y % 22 ? 5 : -5), y, 8, 11, y % 22 ? 40 : -40, LEAF[(y + i) % 3]);
-      put(g, i % 3 === 1 ? "stroberi" : i % 2 ? "kuncup" : "kembangBodas", x, 14 + L, i % 3 === 1 ? 13 : 12, i % 3 === 1 ? 15 : 12, between(-20, 20));
+      put(g, i % 3 === 1 ? "peoni" : i % 2 ? "kuncup" : "kembangBodas", x, 14 + L, i % 3 === 1 ? 16 : 13, i % 3 === 1 ? 16 : 13, between(-20, 20));
     });
   }
   $$(".hitung, .adat, .turut, .rsvp").forEach((sec) => {
