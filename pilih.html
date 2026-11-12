@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Pilih Desain Undangan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
+<style>
+  /* Layout: two phone frames side by side on desktop, tabs on a phone. */
+  :root { --latar: #f4efe6; --kartu: #fffdf8; --mangsi: #3f3a33; --lemah: #8a8276; --garis: #e2d9c9; --matcha: #66785b; --mawar: #b9604f; color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--latar); color: var(--mangsi); font: 400 15px/1.6 "Jost", system-ui, sans-serif; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left)); }
+  h1 { font: 600 2.2rem/1.1 "Cormorant Garamond", Georgia, serif; margin: 0 0 .3rem; text-wrap: balance; }
+  .ket { color: var(--lemah); max-width: 60ch; margin: 0 0 1.6rem; }
+  .tab { display: none; gap: 8px; margin-bottom: 16px; }
+  .tab button { flex: 1; appearance: none; border: 1px solid var(--garis); background: var(--kartu); border-radius: 999px; padding: .6rem 1rem; font: 500 .85rem "Jost", sans-serif; cursor: pointer; color: var(--mangsi); }
+  .tab button[aria-selected="true"] { background: var(--mangsi); color: #fff; border-color: var(--mangsi); }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .opsi { display: grid; gap: 14px; justify-items: center; background: var(--kartu); border: 1px solid var(--garis); border-radius: 22px; padding: 22px 18px; }
+  .opsi header { text-align: center; display: grid; gap: .15rem; }
+  .label { font: 500 .7rem "Jost", sans-serif; letter-spacing: .3em; text-transform: uppercase; }
+  .opsi--1 .label { color: var(--matcha); } .opsi--2 .label { color: var(--mawar); }
+  .opsi h2 { font: 600 1.6rem/1.15 "Cormorant Garamond", Georgia, serif; margin: 0; }
+  .opsi p { margin: 0; color: var(--lemah); font-size: .88rem; max-width: 40ch; }
+  .hp { width: 100%; max-width: 360px; aspect-ratio: 9 / 18.5; border: 10px solid #2c2925; border-radius: 38px; overflow: hidden; background: #2c2925; box-shadow: 0 24px 48px -26px rgba(0,0,0,.5); }
+  .hp iframe { width: 100%; height: 100%; border: 0; display: block; background: #fff; }
+  .aksi { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .btn { display: inline-flex; align-items: center; min-height: 40px; padding: .5rem 1.2rem; border-radius: 999px; text-decoration: none; font: 500 .8rem "Jost", sans-serif; letter-spacing: .06em; }
+  .opsi--1 .btn { background: var(--matcha); color: #fff; } .opsi--2 .btn { background: var(--mawar); color: #fff; }
+  .btn--garis { background: transparent !important; color: var(--mangsi) !important; box-shadow: inset 0 0 0 1px var(--garis); }
+  .catatan { margin-top: 1.6rem; color: var(--lemah); font-size: .85rem; }
+  @media (max-width: 760px) {
+    .tab { display: flex; }
+    .grid { grid-template-columns: 1fr; }
+    .opsi[hidden] { display: none; }
+    .hp { max-width: 340px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Pilih desain undangan</h1>
+  <p class="ket">Keduanya memakai data yang sama: nama, acara, konfirmasi kehadiran, ucapan, dan pelacakan tamu. Coba buka undangan di masing-masing pratinjau, lalu pilih yang paling cocok.</p>
+
+  <div class="tab" role="tablist" aria-label="Pilih opsi">
+    <button role="tab" aria-selected="true" aria-controls="opsi1" id="tab1">Opsi 1 · Cat air</button>
+    <button role="tab" aria-selected="false" aria-controls="opsi2" id="tab2">Opsi 2 · Pasundan</button>
+  </div>
+
+  <div class="grid">
+    <section class="opsi opsi--1" id="opsi1" role="tabpanel" aria-labelledby="tab1">
+      <header>
+        <span class="label">Opsi 1</span>
+        <h2>Cat Air Matcha</h2>
+        <p>Polaroid, amplop yang terbuka, karangan bunga cat air, kupu-kupu, dan sentuhan batik Sunda. Bisa ganti warna tema.</p>
+      </header>
+      <div class="hp"><iframe data-src="index.html" title="Pratinjau Opsi 1" loading="lazy"></iframe></div>
+      <div class="aksi"><a class="btn" data-href="index.html" target="_blank" rel="noopener">Buka penuh</a></div>
+    </section>
+
+    <section class="opsi opsi--2" id="opsi2" role="tabpanel" aria-labelledby="tab2">
+      <header>
+        <span class="label">Opsi 2</span>
+        <h2>Pasundan Vintage</h2>
+        <p>Lukisan alam Jawa Barat dengan rumah adat julang ngapak, bingkai lengkung, bunga yang bergerak sendiri-sendiri, dan gunungan wayang.</p>
+      </header>
+      <div class="hp"><iframe data-src="opsi-2.html" title="Pratinjau Opsi 2" loading="lazy"></iframe></div>
+      <div class="aksi"><a class="btn" data-href="opsi-2.html" target="_blank" rel="noopener">Buka penuh</a></div>
+    </section>
+  </div>
+  <p class="catatan">Halaman ini hanya untuk membandingkan. Setelah memilih, desain terpilih dijadikan halaman utama dan halaman ini bisa dihapus.</p>
+</div>
+<script>
+  // carry the guest code (?to=…) into both previews
+  (function () {
+    var q = location.search;
+    document.querySelectorAll("iframe[data-src]").forEach(function (f) { f.src = f.dataset.src + q; });
+    document.querySelectorAll("a[data-href]").forEach(function (a) { a.href = a.dataset.href + q; });
+    var tabs = document.querySelectorAll("[role=tab]");
+    function pick(t) {
+      tabs.forEach(function (x) {
+        var on = x === t; x.setAttribute("aria-selected", String(on));
+        document.getElementById(x.getAttribute("aria-controls")).hidden = !on && window.matchMedia("(max-width: 760px)").matches;
+      });
+    }
+    tabs.forEach(function (t) { t.addEventListener("click", function () { pick(t); }); });
+    var mq = window.matchMedia("(max-width: 760px)");
+    function sync() { pick(document.querySelector("[role=tab][aria-selected=true]")); }
+    (mq.addEventListener ? mq.addEventListener("change", sync) : mq.addListener(sync)); sync();
+  })();
+</script>
+</body>
+</html>

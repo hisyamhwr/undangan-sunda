@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Meja Tamu — Admin Undangan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=16">
+<link rel="stylesheet" href="assets/admin.css?v=16">
+</head>
+<body class="admin">
+
+<!-- Login -->
+<section class="masuk" id="masuk">
+  <form class="kartu masuk__kartu" id="formMasuk" novalidate>
+    <p class="eyebrow">Meja Tamu</p>
+    <h1>Admin Undangan</h1>
+    <div class="field">
+      <label for="kodeAdmin">Kode admin</label>
+      <input id="kodeAdmin" type="password" autocomplete="current-password" required>
+      <p class="field__hint" id="masukHint"></p>
+    </div>
+    <p class="pesen pesen--salah" id="masukErr" role="alert" hidden></p>
+    <button class="btn btn--leuweung" type="submit" id="masukBtn">Masuk</button>
+  </form>
+</section>
+
+<div class="panel" id="panel" hidden>
+  <header class="topbar">
+    <div class="topbar__in">
+      <div>
+        <p class="eyebrow">Meja Tamu</p>
+        <p class="topbar__nami" id="namaAcara"></p>
+      </div>
+      <div class="topbar__aksi">
+        <span class="chip chip--demo" id="chipDemo" hidden>Mode demo</span>
+        <button class="btn btn--leutik btn--emas" type="button" id="muatUlang">Muat ulang</button>
+        <button class="btn btn--leutik btn--garis" type="button" id="keluar">Keluar</button>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Bagian admin">
+      <button role="tab" aria-selected="true" data-tab="ringkasan" id="tab-ringkasan">Ringkasan</button>
+      <button role="tab" aria-selected="false" data-tab="tamu" id="tab-tamu">Daftar Tamu</button>
+      <button role="tab" aria-selected="false" data-tab="checkin" id="tab-checkin">Check-in</button>
+      <button role="tab" aria-selected="false" data-tab="ucapan" id="tab-ucapan">Ucapan</button>
+    </nav>
+  </header>
+
+  <main class="panel__isi">
+    <!-- RINGKASAN -->
+    <section class="tab-panel" data-panel="ringkasan" role="tabpanel" aria-labelledby="tab-ringkasan">
+      <div class="statistik" id="statistik"></div>
+      <div class="duaan">
+        <div class="kartu">
+          <h2 class="h-kartu">Konfirmasi kehadiran</h2>
+          <div class="bar" id="barRsvp" aria-hidden="true"></div>
+          <ul class="legenda" id="legendaRsvp"></ul>
+        </div>
+        <div class="kartu">
+          <h2 class="h-kartu">Aktivitas terbaru</h2>
+          <ul class="aktivitas" id="aktivitas"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAMU -->
+    <section class="tab-panel" data-panel="tamu" role="tabpanel" aria-labelledby="tab-tamu" hidden>
+      <details class="kartu tambah" id="tambahBox">
+        <summary>Tambah tamu</summary>
+        <form id="formTambah" class="tambah__form" novalidate>
+          <div class="field">
+            <label for="daftarBaru">Nama tamu — satu per baris</label>
+            <textarea id="daftarBaru" rows="5" placeholder="Keluarga Bapak Ujang | 4 | Keluarga&#10;Rina &amp; Pasangan | 2 | Teman Kuliah&#10;Pak Dedi"></textarea>
+            <p class="field__hint">Format: <code>Nama | jumlah orang | grup</code>. Jumlah dan grup boleh dikosongkan.</p>
+          </div>
+          <p class="pesen pesen--salah" id="tambahErr" role="alert" hidden></p>
+          <button class="btn btn--leuweung" type="submit" id="tambahBtn">Simpan tamu</button>
+        </form>
+      </details>
+
+      <div class="saring">
+        <div class="field saring__cari">
+          <label for="cariTamu">Cari</label>
+          <input id="cariTamu" type="search" placeholder="Nama, grup, atau kode">
+        </div>
+        <div class="field">
+          <label for="saringStatus">Status</label>
+          <select id="saringStatus">
+            <option value="">Semua</option>
+            <option value="hadir">Akan hadir</option>
+            <option value="ragu">Ragu</option>
+            <option value="tidak">Tidak hadir</option>
+            <option value="belum">Belum konfirmasi</option>
+            <option value="belum-buka">Belum buka undangan</option>
+            <option value="datang">Sudah datang</option>
+          </select>
+        </div>
+        <button class="btn btn--leutik" type="button" id="eksporCsv">Ekspor CSV</button>
+      </div>
+
+      <div class="tabel-wadah">
+        <table class="tabel" id="tabelTamu">
+          <thead>
+            <tr><th>Tamu</th><th>Dibuka</th><th>Konfirmasi</th><th>Datang</th><th class="ka">Aksi</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="kosong-teks" id="tamuKosong" hidden>Belum ada tamu yang cocok.</p>
+    </section>
+
+    <!-- CHECK-IN -->
+    <section class="tab-panel" data-panel="checkin" role="tabpanel" aria-labelledby="tab-checkin" hidden>
+      <div class="duaan">
+        <div class="kartu">
+          <h2 class="h-kartu">Pindai QR tamu</h2>
+          <div class="pemindai" id="pemindai"></div>
+          <div class="pemindai__aksi">
+            <button class="btn btn--leuweung" type="button" id="mulaiScan">Nyalakan kamera</button>
+            <button class="btn btn--leutik btn--garis-poek" type="button" id="stopScan" hidden>Matikan</button>
+          </div>
+          <p class="field__hint" id="scanHint">Arahkan kamera ke kode QR di tiket tamu.</p>
+          <form class="cari-kode" id="formKode" novalidate>
+            <div class="field">
+              <label for="kodeManual">Atau ketik kode / nama</label>
+              <input id="kodeManual" autocomplete="off" placeholder="mis. CONTOH">
+            </div>
+            <button class="btn btn--leutik" type="submit">Cari</button>
+          </form>
+        </div>
+        <div class="kartu hasil" id="hasilCheckin">
+          <p class="kosong-teks">Hasil pindaian akan muncul di sini.</p>
+        </div>
+      </div>
+      <div class="kartu">
+        <h2 class="h-kartu">Baru check-in</h2>
+        <ul class="aktivitas" id="daftarDatang"></ul>
+      </div>
+    </section>
+
+    <!-- UCAPAN -->
+    <section class="tab-panel" data-panel="ucapan" role="tabpanel" aria-labelledby="tab-ucapan" hidden>
+      <p class="field__hint">Ucapan yang disembunyikan tidak tampil di halaman undangan.</p>
+      <ul class="daftar-ucapan" id="adminUcapan"></ul>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script src="config.js?v=16"></script>
+<script src="assets/common.js?v=16"></script>
+<script src="assets/admin.js?v=16"></script>
+</body>
+</html>
