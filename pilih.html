@@ -13,24 +13,24 @@
   :root { --latar: #f4efe6; --kartu: #fffdf8; --mangsi: #3f3a33; --lemah: #8a8276; --garis: #e2d9c9; --matcha: #66785b; --mawar: #b9604f; color-scheme: light; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--latar); color: var(--mangsi); font: 400 15px/1.6 "Jost", system-ui, sans-serif; }
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left)); }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left)); }
   h1 { font: 600 2.2rem/1.1 "Cormorant Garamond", Georgia, serif; margin: 0 0 .3rem; text-wrap: balance; }
   .ket { color: var(--lemah); max-width: 60ch; margin: 0 0 1.6rem; }
   .tab { display: none; gap: 8px; margin-bottom: 16px; }
   .tab button { flex: 1; appearance: none; border: 1px solid var(--garis); background: var(--kartu); border-radius: 999px; padding: .6rem 1rem; font: 500 .85rem "Jost", sans-serif; cursor: pointer; color: var(--mangsi); }
   .tab button[aria-selected="true"] { background: var(--mangsi); color: #fff; border-color: var(--mangsi); }
-  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
   .opsi { display: grid; gap: 14px; justify-items: center; background: var(--kartu); border: 1px solid var(--garis); border-radius: 22px; padding: 22px 18px; }
   .opsi header { text-align: center; display: grid; gap: .15rem; }
   .label { font: 500 .7rem "Jost", sans-serif; letter-spacing: .3em; text-transform: uppercase; }
-  .opsi--1 .label { color: var(--matcha); } .opsi--2 .label { color: var(--mawar); }
+  .opsi--1 .label { color: var(--matcha); } .opsi--2 .label { color: var(--mawar); } .opsi--3 .label { color: #c4735b; }
   .opsi h2 { font: 600 1.6rem/1.15 "Cormorant Garamond", Georgia, serif; margin: 0; }
   .opsi p { margin: 0; color: var(--lemah); font-size: .88rem; max-width: 40ch; }
   .hp { width: 100%; max-width: 360px; aspect-ratio: 9 / 18.5; border: 10px solid #2c2925; border-radius: 38px; overflow: hidden; background: #2c2925; box-shadow: 0 24px 48px -26px rgba(0,0,0,.5); }
   .hp iframe { width: 100%; height: 100%; border: 0; display: block; background: #fff; }
   .aksi { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
   .btn { display: inline-flex; align-items: center; min-height: 40px; padding: .5rem 1.2rem; border-radius: 999px; text-decoration: none; font: 500 .8rem "Jost", sans-serif; letter-spacing: .06em; }
-  .opsi--1 .btn { background: var(--matcha); color: #fff; } .opsi--2 .btn { background: var(--mawar); color: #fff; }
+  .opsi--1 .btn { background: var(--matcha); color: #fff; } .opsi--2 .btn { background: var(--mawar); color: #fff; } .opsi--3 .btn { background: #5d6946; color: #fff; }
   .btn--garis { background: transparent !important; color: var(--mangsi) !important; box-shadow: inset 0 0 0 1px var(--garis); }
   .catatan { margin-top: 1.6rem; color: var(--lemah); font-size: .85rem; }
   @media (max-width: 760px) {
@@ -44,11 +44,12 @@
 <body>
 <div class="wrap">
   <h1>Pilih desain undangan</h1>
-  <p class="ket">Keduanya memakai data yang sama: nama, acara, konfirmasi kehadiran, ucapan, dan pelacakan tamu. Coba buka undangan di masing-masing pratinjau, lalu pilih yang paling cocok.</p>
+  <p class="ket">Ketiganya memakai data yang sama: nama, acara, konfirmasi kehadiran, ucapan, dan pelacakan tamu. Coba buka undangan di masing-masing pratinjau, lalu pilih yang paling cocok.</p>
 
   <div class="tab" role="tablist" aria-label="Pilih opsi">
     <button role="tab" aria-selected="true" aria-controls="opsi1" id="tab1">Opsi 1 · Cat air</button>
     <button role="tab" aria-selected="false" aria-controls="opsi2" id="tab2">Opsi 2 · Pasundan</button>
+    <button role="tab" aria-selected="false" aria-controls="opsi3" id="tab3">Opsi 3 · Album</button>
   </div>
 
   <div class="grid">
@@ -70,6 +71,16 @@
       </header>
       <div class="hp"><iframe data-src="opsi-2.html" title="Pratinjau Opsi 2" loading="lazy"></iframe></div>
       <div class="aksi"><a class="btn" data-href="opsi-2.html" target="_blank" rel="noopener">Buka penuh</a></div>
+    </section>
+
+    <section class="opsi opsi--3" id="opsi3" role="tabpanel" aria-labelledby="tab3">
+      <header>
+        <span class="label">Opsi 3</span>
+        <h2>Album Kenangan</h2>
+        <p>Sampul album yang terbuka, polaroid berselotip, buku foto yang bisa dibalik, gunung &amp; pendopo cat air, kelopak berguguran, dan menu bawah.</p>
+      </header>
+      <div class="hp"><iframe data-src="opsi-3.html" title="Pratinjau Opsi 3" loading="lazy"></iframe></div>
+      <div class="aksi"><a class="btn" data-href="opsi-3.html" target="_blank" rel="noopener">Buka penuh</a></div>
     </section>
   </div>
   <p class="catatan">Halaman ini hanya untuk membandingkan. Setelah memilih, desain terpilih dijadikan halaman utama dan halaman ini bisa dihapus.</p>

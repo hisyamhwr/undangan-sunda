@@ -7,6 +7,7 @@ Undangan pernikahan bergaya tradisional Sunda: siger, mega mendung, aksara Sunda
 | File | Fungsi |
 |---|---|
 | `index.html` | Halaman undangan untuk tamu |
+| `opsi-2.html`, `opsi-3.html` | Desain alternatif (Pasundan Vintage, Album Kenangan). Bandingkan di `pilih.html` |
 | `admin.html` | Dasbor admin: daftar tamu, link pribadi, statistik RSVP, moderasi ucapan, check-in QR |
 | `config.js` | **Semua data acara**: nama, tanggal, lokasi, rekening, musik, dll. |
 | `apps-script/Code.gs` | Backend gratis (Google Sheets) |
