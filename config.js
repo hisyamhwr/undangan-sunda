@@ -81,7 +81,7 @@ window.UNDANGAN = {
 
   /* Foto berdua untuk polaroid di sampul & penutup, mis. "foto/berdua.jpg".
      Kosong = memakai ilustrasi pasangan bawaan. */
-  fotoBerdua: "foto/berdua.jpg",
+  fotoBerdua: "foto/album/pose-4-potret.webp",  // ilustrasi "Potret berdua"; ganti dengan foto berdua Anda bila ada
   hashtag: "#NisaDanRaka",
 
   /* Dress code. Kosongkan `warna` untuk menyembunyikan. */
