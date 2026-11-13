@@ -132,9 +132,9 @@
   });
   const KUKUPU = '<path class="kukupu__jangjang" d="M0 0 C-6 -9 -14 -8 -12 -1 C-11 3 -5 3 0 0Z M0 0 C-5 3 -10 7 -7 10 C-4 11 -1 6 0 0Z" fill="url(#kkp)"/>' +
     '<path class="kukupu__jangjang" d="M0 0 C6 -9 14 -8 12 -1 C11 3 5 3 0 0Z M0 0 C5 3 10 7 7 10 C4 11 1 6 0 0Z" fill="url(#kkp)"/>' +
-    '<path d="M0 -3 L0 6" stroke="#7b5a4a" stroke-width="1.3" stroke-linecap="round"/>' +
-    '<path d="M0 -3 C-1 -6 -3 -7 -4 -8 M0 -3 C1 -6 3 -7 4 -8" stroke="#7b5a4a" stroke-width=".6" fill="none"/>';
-  const GRAD = '<defs><linearGradient id="kkp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7c9b6"/><stop offset="1" stop-color="#d9826a"/></linearGradient></defs>';
+    '<path d="M0 -3 L0 6" stroke="#3f5131" stroke-width="1.3" stroke-linecap="round"/>' +
+    '<path d="M0 -3 C-1 -6 -3 -7 -4 -8 M0 -3 C1 -6 3 -7 4 -8" stroke="#3f5131" stroke-width=".6" fill="none"/>';
+  const GRAD = '<defs><linearGradient id="kkp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbc4cd"/><stop offset="1" stop-color="#d4425b"/></linearGradient></defs>';
   $$(".kukupu-kukupu").forEach((box) => {
     [{ x: 70, y: 34, d: 0 }, { x: 18, y: 62, d: -4 }, { x: 80, y: 70, d: -8 }].forEach((k, i) => {
       const b = document.createElement("i"); b.className = "kukupu kukupu--" + (i + 1);
