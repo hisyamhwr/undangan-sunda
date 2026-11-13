@@ -8,24 +8,30 @@
 
   /* ---------- photo book ----------
      Uses `galeri` from config.js; without it, falls back to the couple's photos. */
-  const M = C.mempelai || {};
-  const cadangan = [C.fotoBerdua, M.wanita && M.wanita.foto, "foto/pose_tertawa.jpg", M.pria && M.pria.foto, "foto/pose_gandeng.jpg"];
-  const foto = ((C.galeri && C.galeri.length) ? C.galeri : cadangan).filter(Boolean);
+  const POSE = [
+    { src: "foto/album/pose-1-bisik.webp", ket: "Bisikan manis" },
+    { src: "foto/album/pose-2-hate.webp", ket: "Tanda sayang" },
+    { src: "foto/album/pose-3-tatap.webp", ket: "Tatapan penuh kasih" },
+    { src: "foto/album/pose-4-potret.webp", ket: "Potret berdua" }
+  ];
   const KET = ["Awal cerita", "Senyum itu", "Tawa bersama", "Janji kecil", "Bergandeng tangan", "Selamanya"];
+  const foto = (C.galeri && C.galeri.length)
+    ? C.galeri.filter(Boolean).map((src, i) => ({ src, ket: KET[i % KET.length] }))
+    : POSE;
   const buku = $("#bukuHalaman"), no = $("#bukuNo"), prev = $("#bukuPrev"), next = $("#bukuNext");
   let kaca = 0, lembar = [];
 
   if (!foto.length) $("#galeri").hidden = true;
   else {
     $("#galeri").hidden = false;
-    foto.forEach((src, i) => {
+    foto.forEach(({ src, ket }, i) => {
       const p = document.createElement("div");
       p.className = "lembar-foto";
       p.style.zIndex = foto.length - i;
       p.setAttribute("aria-hidden", i ? "true" : "false");
       const d = document.createElement("div"); d.className = "lembar-foto__depan";
       const img = document.createElement("img"); img.src = src; img.alt = `Foto kenangan ${i + 1}`; img.loading = i < 2 ? "eager" : "lazy";
-      const t = document.createElement("p"); t.className = "tulisan"; t.textContent = KET[i % KET.length];
+      const t = document.createElement("p"); t.className = "tulisan"; t.textContent = ket;
       d.append(img, t);
       const b = document.createElement("div"); b.className = "lembar-foto__tukang";
       p.append(d, b); buku.appendChild(p); lembar.push(p);
