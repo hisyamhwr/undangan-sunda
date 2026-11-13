@@ -150,7 +150,7 @@
   // ambient life (birds, butterflies, petals, sparkles) starts once the opening has settled
   const hidup = () => document.body.classList.add("hidup");
   if (document.body.classList.contains("dibuka")) hidup();
-  else $("#bukaUndangan").addEventListener("click", () => setTimeout(hidup, 2600), { once: true });
+  else $("#bukaUndangan").addEventListener("click", () => setTimeout(hidup, 4800), { once: true });
   // pause every looping animation in a section while it is off screen
   if ("IntersectionObserver" in window) {
     const jio = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("jeda", !e.isIntersecting)), { rootMargin: "120px 0px" });
@@ -163,7 +163,7 @@
   watched.forEach((el) => {
     if (el.style.getPropertyValue("--tunda")) return;
     const sibs = Array.from(el.parentElement.children).filter((c) => c.classList.contains("reveal"));
-    const i = sibs.indexOf(el); if (i > 0) el.style.setProperty("--tunda", Math.min(i * .12, .6) + "s");
+    const i = sibs.indexOf(el); if (i > 0) el.style.setProperty("--tunda", Math.min(i * .18, .9) + "s");
   });
   if (reduce || !("IntersectionObserver" in window)) watched.forEach((el) => el.classList.add("in"));
   else {
@@ -174,7 +174,7 @@
     // wait until the album is opened so the first pages animate in view
     const mulai = () => watched.forEach((el) => io.observe(el));
     if (document.body.classList.contains("dibuka")) mulai();
-    else $("#bukaUndangan").addEventListener("click", () => setTimeout(mulai, 900), { once: true });
+    else $("#bukaUndangan").addEventListener("click", () => setTimeout(mulai, 1600), { once: true });
   }
 
   /* ---------- bottom nav: highlight the section in view ---------- */
