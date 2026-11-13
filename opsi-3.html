@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500&family=Caveat:wght@500&family=Noto+Sans+Sundanese:wght@400;600&display=swap">
 <link rel="preload" as="image" href="assets/img/kertas.webp">
-<link rel="stylesheet" href="assets/opsi3.css?v=2">
+<link rel="stylesheet" href="assets/opsi3.css?v=3">
 <script>document.documentElement.classList.add("js");</script>
 </head>
 <body class="is-locked o3">
@@ -55,6 +55,7 @@
   <img class="panel__gunung" src="assets/img/gunung.webp" alt="">
   <img class="kembang kembang--luhur" src="assets/img/kembang-luhur.webp" alt="">
   <img class="kembang kembang--handap" src="assets/img/kembang-handap.webp" alt="">
+  <img class="daun daun--katuhu daun--panel" src="assets/img/daun-katuhu.webp" alt="">
 </aside>
 
 <div class="lambar">
@@ -72,6 +73,7 @@
           <span class="selotip" aria-hidden="true"></span>
           <div class="polaroid__foto" data-foto="berdua"><img src="foto/berdua.jpg" alt=""></div>
           <figcaption class="tulisan"><span data-nama="1"></span> &amp; <span data-nama="2"></span></figcaption>
+          <img class="ronce ronce--polaroid" src="assets/img/ronce.webp" alt="" aria-hidden="true">
         </figure>
         <h1 class="skrip skrip--sampul muncul" style="--t:.8s"><span data-nama="1"></span> <span class="amp">&amp;</span> <span data-nama="2"></span></h1>
         <p class="sampul__tgl muncul" style="--t:1s" data-tanggal-lengkap></p>
@@ -102,6 +104,7 @@
       <svg class="hias hero-a" style="--t:.9s" aria-hidden="true"><use href="#hias"/></svg>
       <p class="hero__tgl hero-a" style="--t:1.05s" data-tanggal-pondok></p>
       <p class="aksara hero-a" style="--t:1.2s" data-aksara lang="su-Sund" aria-hidden="true"></p>
+      <img class="ronce ronce--hero hero-a" style="--t:1.35s" src="assets/img/ronce.webp" alt="" aria-hidden="true">
     </div>
     <div class="hero__bentang" aria-hidden="true">
       <img class="hero__gunung lapis" data-speed=".18" src="assets/img/gunung.webp" alt="">
@@ -114,7 +117,6 @@
   <!-- ============ SALAM & AYAT ============ -->
   <section class="bagian" id="salam">
     <div class="halaman lembar">
-      <span class="pojok pojok--kiri" aria-hidden="true"></span><span class="pojok pojok--kanan" aria-hidden="true"></span>
       <p class="eyebrow reveal">Assalamu’alaikum Wr. Wb.</p>
       <p class="teks reveal">Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami.</p>
       <div class="ayat">
@@ -126,6 +128,8 @@
 
   <!-- ============ MEMPELAI ============ -->
   <section class="bagian" id="mempelai">
+    <img class="daun daun--kiri reveal" data-a="tumbuh" style="top:16%" src="assets/img/daun-kiri.webp" alt="" aria-hidden="true" loading="lazy">
+    <img class="daun daun--katuhu reveal" data-a="tumbuh" style="top:58%" src="assets/img/daun-katuhu.webp" alt="" aria-hidden="true" loading="lazy">
     <h2 class="skrip skrip--judul reveal" data-a="blur">Mempelai</h2>
     <p class="judul-kecil reveal">Halaman pertama album kami</p>
 
@@ -162,6 +166,7 @@
 
   <!-- ============ HITUNG MUNDUR ============ -->
   <section class="bagian hitung">
+    <img class="daun daun--katuhu reveal" data-a="tumbuh" style="bottom:0;width:38%" src="assets/img/daun-katuhu.webp" alt="" aria-hidden="true" loading="lazy">
     <img class="kembang kembang--handap" src="assets/img/kembang-handap.webp" alt="" aria-hidden="true">
     <div class="lengkung lembar">
       <p class="eyebrow reveal">Menuju Hari Bahagia</p>
@@ -181,6 +186,7 @@
 
   <!-- ============ CERITA ============ -->
   <section class="bagian" id="cerita">
+    <img class="daun daun--katuhu reveal" data-a="tumbuh" style="bottom:-2%;width:34%" src="assets/img/daun-katuhu.webp" alt="" aria-hidden="true" loading="lazy">
     <h2 class="skrip skrip--judul reveal" data-a="blur">Kisah Kami</h2>
     <p class="judul-kecil reveal">Lembar demi lembar kenangan</p>
     <ol class="cerita__daptar" id="daftarCerita"></ol>
@@ -197,7 +203,6 @@
   <!-- ============ ADAT ============ -->
   <section class="bagian" id="adat">
     <div class="halaman lembar">
-      <span class="pojok pojok--kiri" aria-hidden="true"></span><span class="pojok pojok--kanan" aria-hidden="true"></span>
       <h2 class="judul-serif reveal">Rangkaian Adat Sunda</h2>
       <svg class="hias reveal" aria-hidden="true"><use href="#hias"/></svg>
       <ol class="adat__daptar" id="daftarAdat"></ol>
@@ -206,6 +211,8 @@
 
   <!-- ============ ALBUM KENANGAN ============ -->
   <section class="bagian" id="galeri">
+    <img class="daun daun--kiri reveal" data-a="tumbuh" style="bottom:4%" src="assets/img/daun-kiri.webp" alt="" aria-hidden="true" loading="lazy">
+    <img class="daun daun--katuhu reveal" data-a="tumbuh" style="top:6%;width:34%" src="assets/img/daun-katuhu.webp" alt="" aria-hidden="true" loading="lazy">
     <h2 class="skrip skrip--judul reveal" data-a="blur">Album Kenangan</h2>
     <p class="judul-kecil reveal">Geser atau ketuk untuk membalik halaman</p>
     <div class="buku reveal" data-a="zoom" id="buku" role="region" aria-roledescription="album foto" aria-label="Album foto">
@@ -232,6 +239,7 @@
     <a class="btn-pil reveal" id="siaranLink" target="_blank" rel="noopener">Tonton Siaran</a>
   </section>
   <section class="bagian bagian--kecil" id="turut">
+    <img class="daun daun--kiri reveal" data-a="tumbuh" style="bottom:-30%;width:32%" src="assets/img/daun-kiri.webp" alt="" aria-hidden="true" loading="lazy">
     <h2 class="judul-serif reveal">Turut Mengundang</h2>
     <div class="turut reveal" id="daftarTurut"></div>
   </section>
@@ -258,6 +266,8 @@
 
   <!-- ============ RSVP & UCAPAN ============ -->
   <section class="bagian" id="rsvp">
+    <img class="daun daun--katuhu reveal" data-a="tumbuh" style="top:2%;width:34%" src="assets/img/daun-katuhu.webp" alt="" aria-hidden="true" loading="lazy">
+    <img class="daun daun--kiri reveal" data-a="tumbuh" style="top:52%;width:34%" src="assets/img/daun-kiri.webp" alt="" aria-hidden="true" loading="lazy">
     <h2 class="skrip skrip--judul reveal" data-a="blur">Konfirmasi Kehadiran</h2>
     <p class="teks reveal">Mohon konfirmasi kehadiran Anda melalui formulir berikut.</p>
     <form class="kartu reveal" id="formRsvp" novalidate>
@@ -318,6 +328,7 @@
         <span class="selotip" aria-hidden="true"></span>
         <div class="polaroid__foto" data-foto="berdua"><img src="foto/berdua.jpg" alt=""></div>
         <figcaption class="tulisan" data-hashtag></figcaption>
+        <img class="ronce ronce--polaroid" src="assets/img/ronce.webp" alt="" aria-hidden="true" loading="lazy">
       </figure>
       <p class="teks reveal">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
       <p class="teks reveal">Atas doa dan restunya, kami ucapkan terima kasih.</p>
@@ -328,6 +339,8 @@
     <div class="penutup__bentang" aria-hidden="true">
       <img class="penutup__gunung" src="assets/img/gunung.webp" alt="" loading="lazy">
       <img class="penutup__pendopo" src="assets/img/pendopo.webp" alt="" loading="lazy">
+      <img class="daun daun--kiri daun--penutup" src="assets/img/daun-kiri.webp" alt="" loading="lazy">
+      <img class="daun daun--katuhu daun--penutup" src="assets/img/daun-katuhu.webp" alt="" loading="lazy">
     </div>
   </section>
 </main>
@@ -352,6 +365,6 @@
 <script src="config.js?v=18"></script>
 <script src="assets/common.js?v=18"></script>
 <script src="assets/app.js?v=18"></script>
-<script src="assets/opsi3.js?v=2"></script>
+<script src="assets/opsi3.js?v=3"></script>
 </body>
 </html>
