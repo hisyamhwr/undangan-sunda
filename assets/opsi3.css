@@ -572,10 +572,19 @@ form .btn-pil { justify-self: center; }
 .hero { display: block; }
 .hero__isi { padding: 9vh 0 0; }
 .hero__bentang { position: absolute; left: 0; right: 0; bottom: 0; height: 50vh; min-height: 280px; margin: 0; z-index: 1; }
+/* the pendopo and its plants stand in front of the tall frame; the mountain stays behind it */
+.hero__bentang { z-index: auto; }
+.hero__gunung, .halimun { z-index: 1; }
+.hero__pendopo { z-index: 4; }
+.hero .daun--hero { z-index: 5; }
+.kembang-hero { z-index: 6; }
 .pigura {
   --bw: min(calc(min(100vw, var(--lebar)) * .78), 330px);
   position: relative; width: var(--bw); margin: 0 auto;
   padding: calc(var(--bw) * .36) 16px calc(var(--bw) * .27);
+  /* a tall frame: reaches down towards the pendopo, text sits in its middle */
+  min-height: 70vh; min-height: 70svh;
+  display: flex; flex-direction: column; justify-content: center;
 }
 /* the frame lives on its own layer: animating it never clips the ornaments */
 .pigura::before {
@@ -593,10 +602,10 @@ form .btn-pil { justify-self: center; }
 .pigura .hero__tgl { font-size: 1.02rem; letter-spacing: .26em; }
 .pigura .aksara { font-size: .9rem; margin-top: .3rem; }
 .pigura__hias { position: absolute; pointer-events: none; user-select: none; }
-.pigura__kembang--luhur { z-index: 3; top: -13%; right: -27%; width: 56%; transform-origin: 85% 15%; }
-.pigura__kembang--handap { z-index: 3; bottom: -10%; left: -22%; width: 58%; transform-origin: 15% 85%; }
-.pigura__daun--luhur { z-index: 1; top: -3%; left: -19%; width: 42%; transform: scaleY(-1); transform-origin: 0 0; }
-.pigura__daun--handap { z-index: 1; bottom: -4%; right: -19%; width: 44%; transform-origin: 100% 100%; }
+.pigura__kembang--luhur { z-index: 3; top: calc(var(--bw) * -.17); right: -27%; width: 56%; transform-origin: 85% 15%; }
+.pigura__kembang--handap { z-index: 3; bottom: calc(var(--bw) * -.13); left: -22%; width: 58%; transform-origin: 15% 85%; }
+.pigura__daun--luhur { z-index: 1; top: calc(var(--bw) * -.04); left: -19%; width: 42%; transform: scaleY(-1); transform-origin: 0 0; }
+.pigura__daun--handap { z-index: 1; bottom: calc(var(--bw) * -.05); right: -19%; width: 44%; transform-origin: 100% 100%; }
 .pigura__cincin { position: absolute; z-index: 2; left: 50%; top: calc(var(--bw) * .055); width: 26%; margin-left: -13%; overflow: visible; }
 .pigura__untai { position: absolute; z-index: 1; top: calc(var(--bw) * .3); width: 5.5%; transform-origin: 50% 0; }
 .pigura__untai--kiri { left: 7%; }
@@ -609,7 +618,6 @@ form .btn-pil { justify-self: center; }
   opacity: 0; animation: kiceup 3.2s ease-in-out var(--k, 0s) infinite; animation-play-state: paused;
 }
 @keyframes kiceup { 0%, 100% { opacity: 0; scale: .3; rotate: 0deg; } 45% { opacity: 1; scale: 1; rotate: 45deg; } 70% { opacity: .2; scale: .6; } }
-.ronce--pigura { position: absolute; z-index: 4; left: 50%; bottom: calc(var(--bw) * -.24); width: 44%; margin-left: -22%; }
 
 @media (max-height: 820px) {
   .hero__isi { padding-top: 6vh; }
@@ -665,7 +673,7 @@ form .btn-pil { justify-self: center; }
 .js .pigura::before { opacity: 0; }
 .dibuka .pigura::before { animation: pigura-asup 1.8s var(--halus) 1s both; }
 @keyframes pigura-asup { from { opacity: 0; scale: .95; translate: 0 12px; } to { opacity: 1; scale: 1; translate: 0 0; } }
-.js .pigura__hias, .js .pigura__cincin, .js .pigura__untai, .js .ronce--pigura { opacity: 0; }
+.js .pigura__hias, .js .pigura__cincin, .js .pigura__untai { opacity: 0; }
 .dibuka .pigura__cincin { animation: cincin-turun 1.8s cubic-bezier(.34, 1.18, .5, 1) 2.2s both, ngambang 4.5s ease-in-out 4s infinite alternate; }
 @keyframes cincin-turun { from { opacity: 0; translate: 0 -16px; scale: .85; } to { opacity: 1; translate: 0 0; scale: 1; } }
 @keyframes ngambang { from { translate: 0 0; } to { translate: 0 -4px; } }
@@ -677,7 +685,6 @@ form .btn-pil { justify-self: center; }
 .dibuka .pigura__untai { animation: untai-turun 1.8s var(--halus) 3.3s both, ayun 4.5s ease-in-out 5.1s infinite alternate; }
 .dibuka .pigura__untai--katuhu { animation-direction: normal, alternate-reverse; }
 @keyframes untai-turun { from { opacity: 0; scale: 1 .4; } to { opacity: 1; scale: 1 1; } }
-.dibuka .ronce--pigura { animation: ronce-turun 1.8s var(--halus) 3.5s both, ayun 5s ease-in-out 5.3s infinite alternate; }
 @keyframes ronce-turun { from { opacity: 0; translate: 0 -10px; } to { opacity: 1; translate: 0 0; } }
 
 .dibuka .hero .daun--hero, .dibuka .kembang-hero { opacity: 1; }
