@@ -23,7 +23,7 @@ window.UNDANGAN = {
       ayah: "Bapak Asep Saepudin",
       ibu: "Ibu Neneng Kurniasih",
       instagram: "",          // mis. "annisa.rhm"
-      foto: "foto/nisa.jpg",  // URL/path foto, mis. "foto/nisa.jpg"
+      foto: "foto/contoh/wanita.jpg",  // FOTO CONTOH (lihat foto/contoh/KREDIT.md) — ganti dengan foto Anda
       aksara: ""              // isi manual jika transliterasi otomatis kurang pas
     },
     pria: {
@@ -33,7 +33,7 @@ window.UNDANGAN = {
       ayah: "Bapak H. Dadang Suherman",
       ibu: "Ibu Hj. Euis Kartika",
       instagram: "",
-      foto: "foto/raka.jpg",
+      foto: "foto/contoh/pria.jpg",    // FOTO CONTOH — ganti dengan foto Anda
       aksara: ""
     }
   },

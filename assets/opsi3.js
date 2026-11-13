@@ -97,12 +97,12 @@
   /* ---------- falling petals ---------- */
   const kotak = $("#kelopak");
   if (kotak && !reduce) {
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < 10; i++) {
       const k = document.createElement("i"); k.className = "kelopak";
       k.style.left = ((i * 37) % 100) + "%";
       k.style.setProperty("--d", (10 + ((i * 7) % 9)) + "s");
       k.style.setProperty("--w", (-(i * 1.7)).toFixed(1) + "s");
-      k.style.setProperty("--x", ((i % 2 ? 1 : -1) * (30 + (i * 11) % 60)) + "px");
+      if (i % 2) k.classList.add("kelopak--b");
       k.style.scale = (0.6 + ((i * 3) % 6) / 10).toFixed(2);
       kotak.appendChild(k);
     }
@@ -113,9 +113,7 @@
      beats its two wings separately. Butterflies flutter near the flowers. */
   const NS = "http://www.w3.org/2000/svg";
   const svg = (vb, html) => { const e = document.createElementNS(NS, "svg"); e.setAttribute("viewBox", vb); e.innerHTML = html; return e; };
-  const MANUK = '<path d="M-7 0.5 C-3 -1.6 3 -1.6 7.5 -0.2 L10.5 -1.2 L8.4 0.6 C4 2.2 -3 2.4 -7 0.5Z" fill="currentColor"/>' +
-    '<path class="jangjang jangjang--tukang" d="M-1 -0.5 C-4 -7 -9 -9.5 -14 -9 C-9 -6 -5 -3 -2.5 0Z" fill="currentColor" opacity=".7"/>' +
-    '<path class="jangjang jangjang--hareup" d="M1 -0.5 C2 -7.5 6 -11 11 -11.5 C7.5 -7 5 -3.5 3 0Z" fill="currentColor"/>';
+  const MANUK = '<path d="M0 7 C4 1 8 1 10 6 C12 1 16 1 20 7 C16 4.5 12 5 10 8.5 C8 5 4 4.5 0 7Z" fill="currentColor"/>';
   $$(".manuk-manuk").forEach((box, j) => {
     const n = box.classList.contains("manuk-manuk--penutup") ? 4 : 7;
     for (let i = 0; i < n; i++) {
@@ -124,11 +122,11 @@
       m.style.setProperty("--sz", (0.55 + ((i * 7) % 6) / 10).toFixed(2));
       m.style.setProperty("--dur", (17 + ((i * 5) % 9)) + "s");
       m.style.setProperty("--tunda-hiber", (-(i * 2.6 + j * 3)).toFixed(1) + "s");
-      m.style.setProperty("--kepak", (0.42 + ((i * 3) % 4) / 20).toFixed(2) + "s");
+      m.style.setProperty("--kepak", (0.34 + ((i * 3) % 4) / 25).toFixed(2) + "s");
       m.style.setProperty("--ombak", (2.6 + (i % 3) * .7).toFixed(1) + "s");
       if (i % 3 === 2) m.classList.add("manuk--balik");      // a few fly the other way
       const w = document.createElement("span"); w.className = "manuk__ombak";
-      w.appendChild(svg("-15 -13 27 17", MANUK));
+      w.appendChild(svg("0 0 20 10", MANUK));
       m.appendChild(w); box.appendChild(m);
     }
   });
@@ -144,6 +142,20 @@
       b.appendChild(svg("-14 -10 28 22", (i ? "" : GRAD) + KUKUPU)); box.appendChild(b);
     });
   });
+
+
+  /* ---------- smoother scrolling ---------- */
+  // decode images off the main thread
+  $$("img").forEach((img) => { img.decoding = "async"; });
+  // ambient life (birds, butterflies, petals, sparkles) starts once the opening has settled
+  const hidup = () => document.body.classList.add("hidup");
+  if (document.body.classList.contains("dibuka")) hidup();
+  else $("#bukaUndangan").addEventListener("click", () => setTimeout(hidup, 2600), { once: true });
+  // pause every looping animation in a section while it is off screen
+  if ("IntersectionObserver" in window) {
+    const jio = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("jeda", !e.isIntersecting)), { rootMargin: "120px 0px" });
+    $$(".hero, .bagian, .penutup").forEach((sec) => jio.observe(sec));
+  }
 
   /* ---------- scroll reveal ---------- */
   const watched = $$(".reveal, .lembar");
