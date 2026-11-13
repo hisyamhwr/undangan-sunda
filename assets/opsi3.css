@@ -725,6 +725,16 @@ form .btn-pil { justify-self: center; }
 @keyframes naek-75 { to { opacity: .75; translate: 0 0; } }
 @keyframes naek-70 { to { opacity: .7; translate: 0 0; } }
 
+
+/* ---------- location: simple frame, full address, map pin ---------- */
+.lokasi { margin: .9rem 0 1rem; padding: 14px 16px 16px; border: 1px solid var(--garis); border-radius: 12px; background: rgba(255, 255, 255, .55); }
+.lokasi__pin { display: block; width: 26px; height: 26px; margin: 0 auto 2px; color: var(--peach-poek); }
+.lokasi__lbl { margin: 0 !important; font-size: .62rem; letter-spacing: .28em; text-transform: uppercase; color: var(--sage-poek); }
+.lokasi .tempat { margin: .3rem 0 .2rem !important; }
+.lokasi .alamat { max-width: none; margin: 0 auto .8rem !important; line-height: 1.55; }
+.lokasi__btn svg { width: 16px; height: 16px; }
+.aksi--kalender { margin-top: .2rem; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
   .kelopak-kelopak, .manuk-manuk, .kukupu-kukupu { display: none; }

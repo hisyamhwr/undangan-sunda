@@ -144,6 +144,27 @@
   });
 
 
+  /* ---------- location: full address + map pin in a simple frame ----------
+     app.js renders venue, address and the buttons; here they are regrouped. */
+  $$(".kartu-acara").forEach((k) => {
+    const tempat = $(".tempat", k), alamat = $(".alamat", k), aksi = $(".aksi", k);
+    if (!tempat || !alamat || !aksi) return;
+    const peta = Array.from(aksi.querySelectorAll("a")).find((a) => /map/i.test(a.href) || /lokasi/i.test(a.textContent));
+    const box = document.createElement("div"); box.className = "lokasi";
+    const pin = document.createElementNS(NS, "svg"); pin.setAttribute("class", "lokasi__pin"); pin.setAttribute("aria-hidden", "true");
+    pin.innerHTML = '<use href="#ikon-pin"/>';
+    const lbl = document.createElement("p"); lbl.className = "lokasi__lbl"; lbl.textContent = "Lokasi";
+    box.append(pin, lbl, tempat, alamat);
+    if (peta) {
+      peta.className = "btn btn--leutik lokasi__btn";
+      peta.innerHTML = '<svg aria-hidden="true"><use href="#ikon-pin"/></svg> Buka Pin Lokasi';
+      peta.setAttribute("aria-label", "Buka pin lokasi " + tempat.textContent + " di Google Maps");
+      box.appendChild(peta);
+    }
+    aksi.before(box);
+    aksi.classList.add("aksi--kalender");
+  });
+
   /* ---------- smoother scrolling ---------- */
   // decode images off the main thread
   $$("img").forEach((img) => { img.decoding = "async"; });

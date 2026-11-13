@@ -75,10 +75,10 @@
     });
 
     // adat
-    if (C.adat && C.adat.length) {
+    if (C.adat && C.adat.length && $("#daftarAdat")) {
       const ol = $("#daftarAdat");
       C.adat.forEach((x) => { const li = el("li", "reveal"); li.appendChild(el("h3", null, x.nama)); li.appendChild(el("p", null, x.ket)); ol.appendChild(li); });
-    } else $("#adat").hidden = true;
+    } else if ($("#adat")) $("#adat").hidden = true;
 
     // gallery
     if (C.galeri && C.galeri.length) {
