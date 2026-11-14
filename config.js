@@ -17,8 +17,8 @@ window.UNDANGAN = {
 
   mempelai: {
     wanita: {
-      panggilan: "Nisa",
-      lengkap: "Annisa Rahmawati, S.Pd.",
+      panggilan: "Annisa",
+      lengkap: "Annisa F.",
       keterangan: "Putri kedua dari",
       ayah: "Bapak Asep Saepudin",
       ibu: "Ibu Neneng Kurniasih",
@@ -27,8 +27,8 @@ window.UNDANGAN = {
       aksara: ""              // isi manual jika transliterasi otomatis kurang pas
     },
     pria: {
-      panggilan: "Raka",
-      lengkap: "Raka Permana, S.T.",
+      panggilan: "Hisyam",
+      lengkap: "Hisyam H.",
       keterangan: "Putra pertama dari",
       ayah: "Bapak H. Dadang Suherman",
       ibu: "Ibu Hj. Euis Kartika",
@@ -82,7 +82,7 @@ window.UNDANGAN = {
   /* Foto berdua untuk polaroid di sampul & penutup, mis. "foto/berdua.jpg".
      Kosong = memakai ilustrasi pasangan bawaan. */
   fotoBerdua: "foto/album/pose-4-potret.webp",  // ilustrasi "Potret berdua"; ganti dengan foto berdua Anda bila ada
-  hashtag: "#NisaDanRaka",
+  hashtag: "#AnnisaDanHisyam",
 
   /* Dress code. Kosongkan `warna` untuk menyembunyikan. */
   busana: {
@@ -111,10 +111,10 @@ window.UNDANGAN = {
 
   /* Amplop digital. Kosongkan array untuk menyembunyikan. */
   hadiah: [
-    { bank: "BCA", nomor: "1234567890", atasNama: "Annisa Rahmawati" },
-    { bank: "Mandiri", nomor: "0987654321", atasNama: "Raka Permana" }
+    { bank: "BCA", nomor: "1234567890", atasNama: "Annisa F." },
+    { bank: "Mandiri", nomor: "0987654321", atasNama: "Hisyam H." }
   ],
-  alamatKado: "Jl. Cihampelas No.100, Kota Bandung 40131 (a.n. Annisa Rahmawati)",
+  alamatKado: "Jl. Cihampelas No.100, Kota Bandung 40131 (a.n. Annisa F.)",
 
   /* Musik latar: URL/path file .mp3, mis. "musik/degung.mp3". Kosongkan = tanpa musik. */
   musik: "",
@@ -125,5 +125,5 @@ window.UNDANGAN = {
   /* Template pesan WhatsApp di halaman admin.
      {nama} = nama tamu, {link} = link undangan pribadi. */
   templateWA:
-    "Assalamu’alaikum Wr. Wb.\n\nKepada Yth. {nama},\n\nTanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami:\n\nNisa & Raka\nSabtu, 16 Januari 2027\n\nInfo lengkap, RSVP, dan ucapan:\n{link}\n\nTerima kasih.\nWassalamu'alaikum."
+    "Assalamu’alaikum Wr. Wb.\n\nKepada Yth. {nama},\n\nTanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami:\n\nAnnisa & Hisyam\nSabtu, 16 Januari 2027\n\nInfo lengkap, RSVP, dan ucapan:\n{link}\n\nTerima kasih.\nWassalamu'alaikum."
 };

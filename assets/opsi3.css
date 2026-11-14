@@ -49,7 +49,7 @@ button { font: inherit; color: inherit; }
 .eyebrow { font: 500 .7rem/1.4 var(--sans); letter-spacing: .32em; text-transform: uppercase; color: var(--sage-poek); margin: 0 0 .6rem; }
 .skrip { font-family: var(--skrip); font-weight: 400; color: var(--peach-poek); line-height: 1.15; margin: 0; }
 .skrip .amp { font-size: .8em; color: var(--sage); }
-.skrip--sampul { font-size: clamp(2.6rem, 12vw, 3.4rem); margin-top: .4rem; }
+.skrip--sampul { font-size: clamp(2.2rem, 9vw, 2.8rem); margin-top: .4rem; white-space: nowrap; }
 .skrip--gede { font-size: clamp(2.8rem, 13vw, 3.8rem); }
 .skrip--judul { font-size: clamp(2.3rem, 10vw, 2.9rem); margin-bottom: .2rem; }
 .skrip--jarak { margin-top: 3.5rem; }

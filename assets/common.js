@@ -103,7 +103,7 @@
       ],
       wishes: [
         { id: makeId(), nama: "Keluarga Bapak Ujang (contoh)", pesan: "Selamat menempuh hidup baru. Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.", kehadiran: "hadir", waktu: t(60), tampil: true },
-        { id: makeId(), nama: "Rina (contoh)", pesan: "Selamat ya Nisa & Raka! Semoga langgeng sampai kakek nenek.", kehadiran: "ragu", waktu: t(29), tampil: true }
+        { id: makeId(), nama: "Rina (contoh)", pesan: "Selamat ya Annisa & Hisyam! Semoga langgeng sampai kakek nenek.", kehadiran: "ragu", waktu: t(29), tampil: true }
       ]
     };
   }
